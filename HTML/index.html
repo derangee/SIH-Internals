@@ -13,7 +13,6 @@
     }
 
     .navbar-brand {
-
       font-weight: bold;
       background: linear-gradient(to bottom, #ccffd1, white);
     }
@@ -43,51 +42,63 @@
     }
 
     .cardcontainer {
-      background: linear-gradient(to bottom, white 50%, #466e4a 50%);
+      display: flex;
+      overflow-x: auto;
+      white-space: nowrap;
+      scroll-behavior: smooth;
+      padding-bottom: 15px;
+      gap: 30px;
+      flex-wrap: nowrap;
+    }
+
+    .cardcontainer::-webkit-scrollbar {
+      display: none;
+    }
+
+    .cardcontainer {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    .plantcontainer {
+      border: 2px solid transparent;
+      height: auto;
+      width: 15vw;
+      list-style-type: none;
+      text-align: center;
     }
 
     .plantimg {
       background-color: #c2d8b0;
       border: 2px solid black;
       height: 30vh;
-      width: 10vw;
-      margin-top: 2vh;
-      margin-left: 5vw;
+      width: 100%;
       display: flex;
       justify-content: center;
-    }
-
-    .plantcontainer {
-      border: 2px solid transparent;
-      height: auto;
-      width: 20vw;
-      list-style-type: none;
-
+      align-items: center;
     }
 
     .plantcontainer img {
       object-fit: contain;
       width: 100%;
+      height: 100%;
     }
 
     .plantname {
-      display: flex;
-      justify-content: center;
-      margin-top: 2vh;
       font-weight: bolder;
+      margin-top: 10px;
     }
 
     .plantinfo {
-      display: flex;
-      justify-content: center;
       font-weight: bolder;
+    }
+
+    .know-more {
+      background-color: #f5f7f1;
+      padding: 40px 0;
     }
   </style>
 </head>
-
-
-
-
 
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -125,76 +136,86 @@
         <div class="col-lg-6">
           <div class="main-plant-image">
             <img src="../images/—Pngtree—3d rendering tulsi plant_14693566.png" alt="Main Plant" class="img-fluid">
-
           </div>
         </div>
       </div>
     </div>
   </div>
 
+  <!-- Horizontal scrollable section for plant cards -->
   <div class="cardcontainer">
-
+    <!-- Plant card 1 -->
     <div class="plantcontainer">
       <div class="plantimg">
-        <img src="http://127.0.0.1:3000/Images/neem.svg" alt="">
+        <img src="http://127.0.0.1:3000/Images/neem.svg" alt="Neem Plant">
       </div>
       <h4 class="plantname">Neem</h4>
       <h5 class="plantinfo">Lorem ipsum</h5>
     </div>
 
-  </div>
-
-
-  
-  <button class="carousel-control-prev" type="button" data-bs-target="#plantCarousel" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#plantCarousel" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-  </div>
-
-
-  <button class="carousel-control-prev" type="button" data-bs-target="#plantCarousel" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#plantCarousel" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
-
-<section class="know-more" style="background-color: #f5f7f1;"> 
-  <div class="container-fluid px-0">
-    <div class="row g-0">
-      <div class="col-12 text-center py-5">
-        <h1 class="display-5 fw-bold" style="color: #2f5d2f;"> 
-          Learn the Benefits of Plants
-        </h1>
-        <p class="lead" style="color: #6c757d;">
-          Discover how plants can improve your well-being, purify the air, and add beauty to your surroundings. Learn all about their benefits in an interactive way.
-        </p>
+    <!-- Plant card 2 -->
+    <div class="plantcontainer">
+      <div class="plantimg">
+        <img src="http://127.0.0.1:3000/Images/neem.svg" alt="Neem Plant">
       </div>
+      <h4 class="plantname">Neem</h4>
+      <h5 class="plantinfo">Lorem ipsum</h5>
+    </div>
 
-      
-      <div class="col-12 text-center">
-        <img src="../images/benefits of plants.jpeg" class="img-fluid" alt="Benefits of Plants" style="max-width: 90%; height: auto;" loading="lazy">
+    <!-- Plant card 3 -->
+    <div class="plantcontainer">
+      <div class="plantimg">
+        <img src="http://127.0.0.1:3000/Images/neem.svg" alt="Neem Plant">
       </div>
+      <h4 class="plantname">Neem</h4>
+      <h5 class="plantinfo">Lorem ipsum</h5>
+    </div>
 
-  
-      <div class="col-12 text-center py-4">
-        <button type="button" class="btn btn-success btn-lg px-4 me-md-2" style="background-color: #4caf50; border-color: #4caf50;"> 
-          Learn More
-        </button>
+    <!-- Plant card 4 -->
+    <div class="plantcontainer">
+      <div class="plantimg">
+        <img src="http://127.0.0.1:3000/Images/neem.svg" alt="Neem Plant">
       </div>
+      <h4 class="plantname">Neem</h4>
+      <h5 class="plantinfo">Lorem ipsum</h5>
+    </div>
+
+    <!-- Plant card 5 -->
+    <div class="plantcontainer">
+      <div class="plantimg">
+        <img src="http://127.0.0.1:3000/Images/neem.svg" alt="Neem Plant">
+      </div>
+      <h4 class="plantname">Neem</h4>
+      <h5 class="plantinfo">Lorem ipsum</h5>
     </div>
   </div>
-</section>
+
+  <section class="know-more">
+    <div class="container-fluid px-0">
+      <div class="row g-0">
+        <div class="col-12 text-center py-5">
+          <h1 class="display-5 fw-bold" style="color: #2f5d2f;">Learn the Benefits of Plants</h1>
+          <p class="lead" style="color: #6c757d;">
+            Discover how plants can improve your well-being, purify the air, and add beauty to your surroundings. Learn
+            all about their benefits in an interactive way.
+          </p>
+        </div>
+        <div class="col-12 text-center">
+          <img src="../images/benefits of plants.jpeg" class="img-fluid" alt="Benefits of Plants"
+            style="max-width: 90%; height: auto;" loading="lazy">
+        </div>
+        <div class="col-12 text-center py-4">
+          <button type="button" class="btn btn-success btn-lg px-4 me-md-2"
+            style="background-color: #4caf50; border-color: #4caf50;">
+            Learn More
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../JavaScript/script.js"></script>
 </body>
 
 </html>
