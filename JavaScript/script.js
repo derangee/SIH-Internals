@@ -108,7 +108,6 @@ async function main() {
 
 
     for (plant of plants) {
-        /*const plantname = plant.split("/").pop().replaceAll("%20", " ").replace(".png", "")*/
         const plantname = ayuplant[plant] || naturoplant[plant] || unaniplant[plant] || siddhaplant[plant] || homeoplant[plant]
         const plantsci = ayusci[plant] || naturosci[plant] || unanisci[plant] || siddhasci[plant] || homeosci[plant]
 
@@ -121,6 +120,21 @@ async function main() {
             <h5 class="plantinfo">${plantsci}</h5>
         </div>`
     }
+
+    let x = document.querySelector(".btn-know-more")
+
+    x.addEventListener("click", () => {
+        const container2 = document.querySelector(".container2");
+    
+        container2.style.display = "block";
+        container2.offsetHeight; 
+        container2.classList.add("show");
+    
+        document.querySelectorAll(".display").forEach(element => {
+            element.style.display = "none";
+        });
+    });
+    
 }
 
 main()
