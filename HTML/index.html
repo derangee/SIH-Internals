@@ -103,10 +103,50 @@
             text-decoration: none;
         }
 
+        .learnmore:hover{
+            color: white;
+            font-size: 1.5rem;
+        }
+
         .learnmore:click {
             color: white;
             text-decoration: none;
         }
+
+        .bgimg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.2;
+        }
+
+        .bgimg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .ayush {
+            position: relative;
+            top: 0;
+            color: black;
+            
+            z-index: 1;
+        }
+
+        .con {
+            margin: 20px;
+            
+        }
+        .con img{
+            border: 1px solid white;
+            border-radius: 20px;
+            box-shadow: 0 4px 4px rgba(0, 1, 0, 0.6);
+        }
+        
     </style>
 </head>
 
@@ -186,6 +226,37 @@
             </div>
         </div>
     </section>
+
+    <div class="container">
+        <div class="bgimg">
+            <img src="../PNG/bgimg.jpeg" alt="Background Image">
+        </div>
+
+        <div class="ayush">
+            <div class="con">
+                <h3>AYURVEDA</h3>
+                <img src="blog-resize-5.jpg" height="200px" width="500px" alt="">
+            </div>
+            <div class="con">
+                <h3>Naturopathy</h3>
+                <img src="naturopathy.jpg" height="200px" width="500px" alt="">
+            </div>
+            <div class="con">
+                <h3>Unani</h3>
+                <img src="Unani-Medicine-012-1536x960.jpeg" height="200px" width="500px" alt="">
+            </div>
+            <div class="con">
+                <h3>Siddha</h3>
+                <img src="siddha.jpg" height="200px" width="500px" alt="">
+            </div>
+            <div class="con">
+                <h3>Homeopathy</h3>
+                <img src="360_F_198326436_IE9KDVfC7Dd0gpqNDLc7gP5GOdrzV6Bd.jpg" height="200px" width="500px" alt="">
+            </div>
+        </div>
+    </div>
+
+   
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../JavaScript/script.js"></script>
