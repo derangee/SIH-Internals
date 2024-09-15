@@ -2,220 +2,217 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HerbSphere - Plants Make Everything Better</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    body {
-      background-color: #e8f5e9;
-      font-family: Arial, sans-serif;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HerbSphere - Plants Make Everything Better</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="../SVG/favicon icon/favicon.ico" type="image/x-icon">
+    <style>
+        body {
+            background-color: #e8f5e9;
+            font-family: Arial, sans-serif;
+        }
 
-    .navbar-brand {
-      font-weight: bold;
-      background: linear-gradient(to bottom, #ccffd1, white);
-    }
+        .navbar-brand {
+            font-weight: bold;
+            background: linear-gradient(to bottom, #ccffd1, white);
+        }
 
-    .navbar-brand img {
-      width: 30px;
-      margin-right: 10px;
-    }
+        .navbar-brand img {
+            width: 30px;
+            margin-right: 10px;
+        }
 
-    .hero {
-      background: linear-gradient(to bottom, #ccffd1, white);
-      padding: 50px 0;
-    }
+        .hero {
+            background: linear-gradient(to bottom, #ccffd1, white);
+            padding: 50px 0;
+        }
 
-    .hero h1 {
-      color: #1b5e20;
-      font-size: 3.5rem;
-      font-weight: bold;
-      line-height: 1.2;
-    }
+        .hero h1 {
+            color: #1b5e20;
+            font-size: 3.5rem;
+            font-weight: bold;
+            line-height: 1.2;
+        }
 
-    .btn-know-more {
-      background-color: #2e7d32;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 25px;
-    }
+        .btn-know-more {
+            background-color: #2e7d32;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+        }
 
-    .cardcontainer {
-      display: flex;
-      overflow-x: auto;
-      white-space: nowrap;
-      scroll-behavior: smooth;
-      padding-bottom: 15px;
-      gap: 30px;
-      flex-wrap: nowrap;
-    }
+        /* Horizontal scroll for plant cards */
+        .cardcontainer {
+            display: flex;
+            overflow-x: scroll;
+            white-space: nowrap;
+            padding-bottom: 15px;
+            gap: 30px;
+            scrollbar-width: none;
+            /* Hide the scrollbar */
+        }
 
-    .cardcontainer::-webkit-scrollbar {
-      display: none;
-    }
+        /* Hide scrollbar for WebKit browsers */
+        .cardcontainer::-webkit-scrollbar {
+            display: none;
+        }
 
-    .cardcontainer {
-      -ms-overflow-style: none;
-      scrollbar-width: none;
-    }
+        .plantcontainer {
+            border: 2px solid transparent;
+            height: auto;
+            width: 15vw;
+            list-style-type: none;
+            text-align: center;
+            flex: 0 0 auto;
+        }
 
-    .plantcontainer {
-      border: 2px solid transparent;
-      height: auto;
-      width: 15vw;
-      list-style-type: none;
-      text-align: center;
-    }
+        .plantimg {
+            background-color: #c2d8b0;
+            border: 2px solid black;
+            height: 30vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-    .plantimg {
-      background-color: #c2d8b0;
-      border: 2px solid black;
-      height: 30vh;
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+        .plantcontainer img {
+            object-fit: contain;
+            width: 100%;
+            height: 100%;
+        }
 
-    .plantcontainer img {
-      object-fit: contain;
-      width: 100%;
-      height: 100%;
-    }
+        .plantname {
+            font-weight: bolder;
+            margin-top: 10px;
+        }
 
-    .plantname {
-      font-weight: bolder;
-      margin-top: 10px;
-    }
+        .plantinfo {
+            font-weight: bolder;
+        }
 
-    .plantinfo {
-      font-weight: bolder;
-    }
+        .know-more {
+            background-color: #f5f7f1;
+            padding: 40px 0;
+        }
 
-    .know-more {
-      background-color: #f5f7f1;
-      padding: 40px 0;
-    }
-  </style>
+        .learnmore {
+            color: white;
+            text-decoration: none;
+        }
+
+        .learnmore:click {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container">
-      <a class="navbar-brand" href="#"><img src="../images/LOGO TREE.png" alt="HerbSphere Logo"> HerbSphere</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">About us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <div class="hero">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-lg-6">
-          <h1>Plants Makes,<br>Everything Better</h1>
-          <p class="lead mb-4">Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in
-            hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas
-            vitae mattis tellus.</p>
-          <button class="btn btn-know-more">know more</button>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="../images/LOGO TREE.png" alt="HerbSphere Logo"> HerbSphere</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://127.0.0.1:3000/HTML/about.html" target="_blank">About us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://127.0.0.1:3000/HTML/about.html#contact target="_blank" >Contact</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <div class="col-lg-6">
-          <div class="main-plant-image">
-            <img src="../images/—Pngtree—3d rendering tulsi plant_14693566.png" alt="Main Plant" class="img-fluid">
-          </div>
+    </nav>
+
+    <div class="hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1>Plants Makes,<br>Everything Better</h1>
+                    <p class="lead mb-4">Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam
+                        in
+                        hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices
+                        mauris. Maecenas
+                        vitae mattis tellus.</p>
+                    <button class="btn btn-know-more">Know More</button>
+                </div>
+                <div class="col-lg-6">
+                    <div class="main-plant-image">
+                        <img src="../images/—Pngtree—3d rendering tulsi plant_14693566.png" alt="Main Plant"
+                            class="img-fluid">
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Horizontal scrollable section for plant cards -->
-  <div class="cardcontainer">
-    <!-- Plant card 1 -->
-    <div class="plantcontainer">
-      <div class="plantimg">
-        <img src="http://127.0.0.1:3000/Images/neem.svg" alt="Neem Plant">
-      </div>
-      <h4 class="plantname">Neem</h4>
-      <h5 class="plantinfo">Lorem ipsum</h5>
     </div>
 
-    <!-- Plant card 2 -->
-    <div class="plantcontainer">
-      <div class="plantimg">
-        <img src="http://127.0.0.1:3000/Images/neem.svg" alt="Neem Plant">
-      </div>
-      <h4 class="plantname">Neem</h4>
-      <h5 class="plantinfo">Lorem ipsum</h5>
-    </div>
-
-    <!-- Plant card 3 -->
-    <div class="plantcontainer">
-      <div class="plantimg">
-        <img src="http://127.0.0.1:3000/Images/neem.svg" alt="Neem Plant">
-      </div>
-      <h4 class="plantname">Neem</h4>
-      <h5 class="plantinfo">Lorem ipsum</h5>
-    </div>
-
-    <!-- Plant card 4 -->
-    <div class="plantcontainer">
-      <div class="plantimg">
-        <img src="http://127.0.0.1:3000/Images/neem.svg" alt="Neem Plant">
-      </div>
-      <h4 class="plantname">Neem</h4>
-      <h5 class="plantinfo">Lorem ipsum</h5>
-    </div>
-
-    <!-- Plant card 5 -->
-    <div class="plantcontainer">
-      <div class="plantimg">
-        <img src="http://127.0.0.1:3000/Images/neem.svg" alt="Neem Plant">
-      </div>
-      <h4 class="plantname">Neem</h4>
-      <h5 class="plantinfo">Lorem ipsum</h5>
-    </div>
-  </div>
-
-  <section class="know-more">
-    <div class="container-fluid px-0">
-      <div class="row g-0">
-        <div class="col-12 text-center py-5">
-          <h1 class="display-5 fw-bold" style="color: #2f5d2f;">Learn the Benefits of Plants</h1>
-          <p class="lead" style="color: #6c757d;">
-            Discover how plants can improve your well-being, purify the air, and add beauty to your surroundings. Learn
-            all about their benefits in an interactive way.
-          </p>
+    <!-- Horizontal scrollable section for plant cards -->
+    <div class="cardcontainer" id="cardContainer">
+        <!-- Plant card 1 -->
+        <div class="plantcontainer">
+            <div class="plantimg">
+                <img src="http://127.0.0.1:3000/Images/neem.svg" alt="Neem Plant">
+            </div>
+            <h4 class="plantname">Neem</h4>
+            <h5 class="plantinfo">Azadirachta indica</h5>
         </div>
-        <div class="col-12 text-center">
-          <img src="../images/benefits of plants.jpeg" class="img-fluid" alt="Benefits of Plants"
-            style="max-width: 90%; height: auto;" loading="lazy">
-        </div>
-        <div class="col-12 text-center py-4">
-          <button type="button" class="btn btn-success btn-lg px-4 me-md-2"
-            style="background-color: #4caf50; border-color: #4caf50;">
-            Learn More
-          </button>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="../JavaScript/script.js"></script>
+        <!-- Add more plant cards here as needed -->
+
+        <!-- Example repeated plant card -->
+        <div class="plantcontainer">
+            <div class="plantimg">
+                <img src="http://127.0.0.1:3000/Images/neem.svg" alt="Neem Plant">
+            </div>
+            <h4 class="plantname">Neem</h4>
+            <h5 class="plantinfo">Azadirachta indica</h5>
+        </div>
+
+        <div class="plantcontainer">
+            <div class="plantimg">
+                <img src="http://127.0.0.1:3000/Images/neem.svg" alt="Neem Plant">
+            </div>
+            <h4 class="plantname">Neem</h4>
+            <h5 class="plantinfo">Azadirachta indica</h5>
+        </div>
+
+
+    </div>
+
+    <section class="know-more">
+        <div class="container-fluid px-0">
+            <div class="row g-0">
+                <div class="col-12 text-center py-5">
+                    <h1 class="display-5 fw-bold" style="color: #2f5d2f;">Learn the Benefits of Plants</h1>
+                    <p class="lead" style="color: #6c757d;">
+                        Discover how plants can improve your well-being, purify the air, and add beauty to your
+                        surroundings. Learn
+                        all about their benefits in an interactive way.
+                    </p>
+                </div>
+                <div class="col-12 text-center">
+                    <img src="../images/benefits of plants.jpeg" class="img-fluid" alt="Benefits of Plants"
+                        style="max-width: 90%; height: auto;" loading="lazy">
+                </div>
+                <div class="col-12 text-center py-4">
+                    <button type="button" class="btn btn-success btn-lg px-4 me-md-2"
+                        style="background-color: #4caf50; border-color: #4caf50;"><a href="https://ayush.gov.in/"
+                            class="learnmore" target="_blank" >Learn More</a>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

@@ -7,7 +7,7 @@ async function fetchcplants() {
     let plants = [];
     for (let index = 0; index < as.length; index++) {
         const element = as[index];
-        if (element.href.endsWith(".svg")) {
+        if (element.href.endsWith(".svg" || ".png")) {
             plants.push(element.href);
         }
     }
@@ -15,6 +15,6 @@ async function fetchcplants() {
 }
 
 
-async main() {
+async function main() {
 
 }
