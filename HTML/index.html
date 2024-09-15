@@ -41,47 +41,9 @@
       border-radius: 25px;
     }
 
-    .plant-card {
-      background-color: #c8e6c9;
-      border-radius: 15px;
-      padding: 20px;
-      text-align: center;
-      margin-bottom: 20px;
-      height: 400px;
-      width: 400px;
-    }
-
-    .plant-card img {
-      max-width: 100%;
-      height: auto;
-      margin-bottom: 15px;
-    }
-
-    .plant-card h3 {
-      color: #1b5e20;
-      font-weight: bold;
-
-    }
-
-    .main-plant-image {
-      position: relative;
-    }
-
-    .plant-label {
-      position: absolute;
-      background-color: #ff4081;
-      color: white;
-      padding: 5px 10px;
-      border-radius: 15px;
-      font-size: 0.8rem;
-    }
-
     .cardcontainer {
       background: linear-gradient(to bottom, white 50%, green 50%);
     }
-
-
-
 
     .plantimg {
       background-color: #c2d8b0;
@@ -110,7 +72,7 @@
     .plantname {
       display: flex;
       justify-content: center;
-      margin-top: 5vh;
+      margin-top: 2vh;
       font-weight: bolder;
     }
 
@@ -175,14 +137,14 @@
       <div class="plantimg">
         <img src="http://127.0.0.1:3000/Images/neem.svg" alt="">
       </div>
-      <p class="plantname">Neem</p>
-      <div class="plantinfo">Lorem ipsum</div>
+      <h4 class="plantname">Neem</h4>
+      <h5 class="plantinfo">Lorem ipsum</h5>
     </div>
 
   </div>
 
 
-  <!-- Carousel controls -->
+  
   <button class="carousel-control-prev" type="button" data-bs-target="#plantCarousel" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Previous</span>
@@ -192,6 +154,44 @@
     <span class="visually-hidden">Next</span>
   </button>
   </div>
+
+
+  <button class="carousel-control-prev" type="button" data-bs-target="#plantCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#plantCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<section class="know-more" style="background-color: #f5f7f1;"> 
+  <div class="container-fluid px-0">
+    <div class="row g-0">
+      <div class="col-12 text-center py-5">
+        <h1 class="display-5 fw-bold" style="color: #2f5d2f;"> 
+          Learn the Benefits of Plants
+        </h1>
+        <p class="lead" style="color: #6c757d;">
+          Discover how plants can improve your well-being, purify the air, and add beauty to your surroundings. Learn all about their benefits in an interactive way.
+        </p>
+      </div>
+
+      
+      <div class="col-12 text-center">
+        <img src="../images/benefits of plants.jpeg" class="img-fluid" alt="Benefits of Plants" style="max-width: 90%; height: auto;" loading="lazy">
+      </div>
+
+  
+      <div class="col-12 text-center py-4">
+        <button type="button" class="btn btn-success btn-lg px-4 me-md-2" style="background-color: #4caf50; border-color: #4caf50;"> 
+          Learn More
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
