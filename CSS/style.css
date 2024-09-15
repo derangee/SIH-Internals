@@ -1,335 +1,43 @@
-.desktop-1,
-.desktop-1 * {
-  box-sizing: border-box;
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body{
+    background: linear-gradient(180deg, #CCFFD1 0%, #FFFFFF 33.5%);
 }
-.desktop-1 {
-  background: linear-gradient(
-    180deg,
-    rgba(204, 255, 209, 1) 0%,
-    rgba(255, 255, 255, 1) 33.50000083446503%
-  );
-  padding: 53px 64px 53px 64px;
-  height: 1470px;
-  position: relative;
-  overflow: hidden;
-}
-.herb-sphere {
-  color: #000000;
-  text-align: left;
-  font-family: "Fustat-Bold", sans-serif;
-  font-size: 30px;
-  font-weight: 700;
-  position: absolute;
-  left: 145px;
-  top: 54px;
-}
-.plants-makes {
-  color: #093e00;
-  text-align: left;
-  font-family: "KaiseiOpti-Bold", sans-serif;
-  font-size: 80px;
-  font-weight: 700;
-  position: absolute;
-  left: 93px;
-  top: 225px;
-  width: 565px;
-  height: 116px;
-}
-.everything-better {
-  color: #093e00;
-  text-align: left;
-  font-family: "KaiseiOpti-Bold", sans-serif;
-  font-size: 80px;
-  font-weight: 700;
-  position: absolute;
-  left: 215px;
-  top: 331px;
-  width: 701px;
-  height: 116px;
-}
-.pngtree-rising-arrows-png-image-2921287-removebg-preview-1 {
-  width: 126px;
-  height: 126px;
-  position: absolute;
-  left: 1018.75px;
-  top: 388.69px;
-  transform-origin: 0 0;
-  transform: rotate(-147.907deg) scale(1, 1);
-  object-fit: cover;
-}
-.pngtree-rising-arrows-png-image-2921287-removebg-preview-2 {
-  width: 114.67px;
-  height: 71.84px;
-  position: absolute;
-  left: 1212.17px;
-  top: 628px;
-  transform-origin: 0 0;
-  transform: rotate(32.093deg) scale(1, 1);
-  object-fit: cover;
-}
-.logo-tree-1 {
-  width: 54px;
-  height: 54px;
-  position: absolute;
-  left: 93px;
-  top: 42px;
-  object-fit: cover;
-}
-.home {
-  color: #000000;
-  text-align: left;
-  font-family: "KumbhSans-Regular", sans-serif;
-  font-size: 25px;
-  font-weight: 400;
-  position: absolute;
-  left: 912px;
-  top: 59px;
-  width: 106px;
-  height: 31px;
-}
-.tulsi {
-  color: #000000;
-  text-align: left;
-  font-family: "KumbhSans-Regular", sans-serif;
-  font-size: 20px;
-  font-weight: 400;
-  position: absolute;
-  left: 894px;
-  top: 299px;
-  width: 68px;
-  height: 31px;
-}
-.lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-ut-et-massa-mi-aliquam-in-hendrerit-urna-pellentesque-sit-amet-sapien-fringilla-mattis-ligula-consectetur-ultrices-mauris-maecenas-vitae-mattis-tellus {
-  color: #8b8b8b;
-  text-align: left;
-  font-family: "KumbhSans-Regular", sans-serif;
-  font-size: 20px;
-  font-weight: 400;
-  position: absolute;
-  left: 93px;
-  top: 502px;
-  width: 622px;
-  height: 104px;
-}
-.medicinal-properties {
-  color: #000000;
-  text-align: left;
-  font-family: "KumbhSans-Regular", sans-serif;
-  font-size: 20px;
-  font-weight: 400;
-  position: absolute;
-  left: 1305px;
-  top: 644px;
-  width: 104px;
-  height: 50px;
-}
-.about-us {
-  color: #000000;
-  text-align: left;
-  font-family: "KumbhSans-Regular", sans-serif;
-  font-size: 25px;
-  font-weight: 400;
-  position: absolute;
-  left: 1072px;
-  top: 59px;
-  width: 106px;
-  height: 31px;
-}
-.contact {
-  color: #000000;
-  text-align: left;
-  font-family: "KumbhSans-Regular", sans-serif;
-  font-size: 25px;
-  font-weight: 400;
-  position: absolute;
-  left: 1242px;
-  top: 59px;
-  width: 106px;
-  height: 31px;
-}
-.rectangle-1 {
-  background: #014200;
-  border-radius: 40px;
-  width: 182px;
-  height: 55px;
-  position: absolute;
-  left: 93px;
-  top: 636px;
-  box-shadow: 0px 4px 13.1px 3px rgba(0, 0, 0, 0.78);
-}
-.know-more {
-  color: #ffffff;
-  text-align: left;
-  font-family: "KumbhSans-Bold", sans-serif;
-  font-size: 20px;
-  font-weight: 700;
-  position: absolute;
-  left: 131px;
-  top: 650px;
-  width: 144px;
-  height: 31px;
-}
-.rectangle-2 {
-  background: #014200;
-  width: 1440px;
-  height: 381px;
-  position: absolute;
-  left: 0px;
-  top: 922px;
-}
-.rectangle-3 {
-  background: #c2d8b0;
-  border-radius: 20px;
-  width: 296px;
-  height: 208px;
-  position: absolute;
-  left: 93px;
-  top: 865px;
-}
-.rectangle-4 {
-  background: #f0eccb;
-  border-radius: 20px;
-  width: 296px;
-  height: 208px;
-  position: absolute;
-  left: 572px;
-  top: 865px;
-}
-.ashwagandha-removebg-preview-1 {
-  width: 422px;
-  height: 286px;
-  position: absolute;
-  left: 523px;
-  top: 776px;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  object-fit: cover;
-}
-.rectangle-5 {
-  background: #d5eaea;
-  border-radius: 20px;
-  width: 296px;
-  height: 208px;
-  position: absolute;
-  left: 1051px;
-  top: 865px;
-}
-.neem-1 {
-  width: 265px;
-  height: 314px;
-  position: absolute;
-  left: 91px;
-  top: 731px;
-  box-shadow: -6px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  object-fit: cover;
-}
-.pngtree-amla-fruit-basket-png-png-image-3211919-removebg-preview-1 {
-  width: 390px;
-  height: 279px;
-  position: absolute;
-  left: 1004px;
-  top: 791px;
-  object-fit: cover;
-}
-.neem {
-  color: #ffffff;
-  text-align: left;
-  font-family: "KulimPark-SemiBold", sans-serif;
-  font-size: 28px;
-  font-weight: 600;
-  position: absolute;
-  left: 203px;
-  top: 1113px;
-  width: 84px;
-  height: 30px;
-}
-.lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-ut-et-massa-mi-aliquam-in-hendrerit {
-  color: #ffffff;
-  text-align: left;
-  font-family: "KulimPark-SemiBold", sans-serif;
-  font-size: 18px;
-  font-weight: 600;
-  position: absolute;
-  left: 105px;
-  top: 1169px;
-  width: 305px;
-  height: 70px;
-}
-.lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-ut-et-massa-mi-aliquam-in-hendrerit2 {
-  color: #ffffff;
-  text-align: left;
-  font-family: "KulimPark-SemiBold", sans-serif;
-  font-size: 18px;
-  font-weight: 600;
-  position: absolute;
-  left: 602px;
-  top: 1169px;
-  width: 305px;
-  height: 70px;
-}
-.lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-ut-et-massa-mi-aliquam-in-hendrerit3 {
-  color: #ffffff;
-  text-align: left;
-  font-family: "KulimPark-SemiBold", sans-serif;
-  font-size: 18px;
-  font-weight: 600;
-  position: absolute;
-  left: 1084px;
-  top: 1169px;
-  width: 305px;
-  height: 70px;
-}
-.ashwagandha {
-  color: #ffffff;
-  text-align: left;
-  font-family: "KulimPark-SemiBold", sans-serif;
-  font-size: 28px;
-  font-weight: 600;
-  position: absolute;
-  left: 632px;
-  top: 1113px;
-  width: 176px;
-  height: 30px;
-}
-.amla {
-  color: #ffffff;
-  text-align: left;
-  font-family: "KulimPark-SemiBold", sans-serif;
-  font-size: 28px;
-  font-weight: 600;
-  position: absolute;
-  left: 1174px;
-  top: 1113px;
-  width: 84px;
-  height: 30px;
-}
-.pngtree-3-d-rendering-tulsi-plant-14693566-2 {
-  width: 522px;
-  height: 648px;
-  position: absolute;
-  left: 887px;
-  top: 123px;
-}
-.pngtree-3-d-rendering-tulsi-plant-14693566-22 {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  right: 0%;
-  left: 0%;
-  bottom: 0%;
-  top: 0%;
-  box-shadow: -17px 18px 4px 0px rgba(0, 0, 0, 0.32);
-  object-fit: cover;
+.flex{
+    display: flex;
 }
 
-/* Figma Styles of your File */
-:root {
-  /* Colors */
-  --d9d9d9: linear-gradient(
-    180deg,
-    rgba(175, 255, 188, 1) 0%,
-    rgba(217, 217, 217, 1) 60.50000190734863%
-  );
+.nav{
 
-  /* Fonts */
-  /* Effects */
+    color: black;
+    height: 120vh;
+}
+.logo div{
+    margin-top: 16px;
+}
+
+.nav li{
+    font-weight: bold;
+}
+
+.logo{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+}
+
+.nav img{
+    height:35px ;
+    width:35px ;
+    margin-top: 10px;
+    object-fit: contain;
+    margin-left: 2vw;
+}
+
+.about{
+    list-style: none;
+    gap:70px;
+    display: flex;
+    justify-content: end;
+    margin-left: 60vw;
 }
