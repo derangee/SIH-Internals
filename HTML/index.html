@@ -7,10 +7,23 @@
     <title>HerbSphere - Plants Make Everything Better</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="shortcut icon" href="../SVG/favicon icon/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
         body {
             background-color: #e8f5e9;
             font-family: Arial, sans-serif;
+        }
+
+        .hero {
+            font-family: "Outfit", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: bold;
+            font-style: normal;
         }
 
         .navbar-brand {
@@ -18,9 +31,19 @@
             background: linear-gradient(to bottom, #ccffd1, white);
         }
 
+
         .navbar-brand img {
             width: 30px;
             margin-right: 10px;
+        }
+
+        .nav-link {
+            color: black !important;
+            font-weight: bolder;
+        }
+
+        .nav-link:hover {
+            font-size: 1.1rem;
         }
 
         .hero {
@@ -42,7 +65,7 @@
             border-radius: 25px;
         }
 
-        /* Horizontal scroll for plant cards */
+
         .cardcontainer {
             display: flex;
             overflow-x: scroll;
@@ -50,10 +73,10 @@
             padding-bottom: 15px;
             gap: 30px;
             scrollbar-width: none;
-            /* Hide the scrollbar */
+            background: linear-gradient(180deg, white 50%, #2e7d32 50%);
         }
 
-        /* Hide scrollbar for WebKit browsers */
+
         .cardcontainer::-webkit-scrollbar {
             display: none;
         }
@@ -65,6 +88,7 @@
             list-style-type: none;
             text-align: center;
             flex: 0 0 auto;
+            margin: 3vw;
         }
 
         .plantimg {
@@ -75,6 +99,15 @@
             display: flex;
             justify-content: center;
             align-items: center;
+
+        }
+
+        .plantcontainer h4 {
+            color: white;
+        }
+
+        .plantcontainer h5 {
+            color: #ccffd1;
         }
 
         .plantcontainer img {
@@ -102,9 +135,330 @@
             text-decoration: none;
         }
 
+        .learnmore:hover {
+            color: white;
+            font-size: 1.5rem;
+        }
+
         .learnmore:click {
             color: white;
             text-decoration: none;
+        }
+
+        .bgimg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.2;
+        }
+
+        .bgimg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .ayush {
+            position: relative;
+            top: 0;
+            color: black;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+
+            z-index: 1;
+        }
+
+        .con {
+            position: relative;
+            margin: 20px;
+            display: block;
+            width: 100%;
+            max-width: 405px;
+
+        }
+
+        .con h3 {
+            font-weight: bold;
+        }
+
+        .con img {
+            border: 1px solid white;
+            border-radius: 20px;
+            box-shadow: 0 4px 4px rgba(0, 1, 0, 0.6);
+            width: 300px;
+            max-width: 500px;
+
+        }
+
+        .container2 {
+            display: none;
+            opacity: 0;
+            transition: opacity 1s ease;
+            position: relative;
+
+        }
+
+        .container2.show {
+            display: block;
+            opacity: 1;
+        }
+
+        .tooltip-snippet {
+            display: none;
+            position: absolute;
+            left: 30%;
+            bottom: 70%;
+            background-color: rgba(255, 255, 255, 0.9);
+            color: black;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 295px;
+            z-index: 10;
+        }
+
+
+        .con:hover .tooltip-snippet {
+            display: block;
+
+        }
+
+        .imageovertext {
+            position: relative;
+            text-align: center;
+        }
+
+        .imageovertext img {
+            width: 100%;
+            height: 80%;
+        }
+
+        .imagetext {
+            position: absolute;
+            top: 60%;
+            left: 80%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 3rem;
+            font-weight: bold;
+            z-index: 1;
+        }
+
+        .bold {
+            font-weight: bold;
+        }
+
+        .imagetext {
+            font-family: "Outfit", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: bold;
+            font-style: normal;
+        }
+
+
+        .font {
+            font-family: "Outfit", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: bold;
+            font-style: normal;
+        }
+
+        .large {
+            font-size: 70px;
+        }
+
+        .ayu {
+            display: none;
+        }
+
+        .naturo {
+            display: none;
+        }
+
+        .unan {
+            display: none;
+        }
+
+        .sid {
+            display: none;
+        }
+
+        .homeo {
+            display: none;
+        }
+
+
+
+        .containerp4 {
+            margin: 10px;
+            overflow: hidden;
+        }
+
+        .conp4 {
+            display: flex;
+            background-color: #dcf2ca.;
+            border: 2px solid transparent;
+            border-radius: 10px;
+            margin: 20px;
+            opacity: 0;
+            transform: translateX(-100%);
+            animation: slide-in 1s ease forwards;
+        }
+
+        .conp4:nth-child(1) {
+            animation-delay: 0.2s;
+        }
+
+        .conp4:nth-child(2) {
+            animation-delay: 0.4s;
+        }
+
+        .conp4:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+
+        .conp4:nth-child(4) {
+            animation-delay: 0.8s;
+        }
+
+        .conp4:nth-child(5) {
+            animation-delay: 1s;
+        }
+
+        .imgp4 {
+            border: 2px solid green;
+            border-radius: 10px;
+            height: 200px;
+            width: 200px;
+            background-color: #bfd9bb;
+            padding: 10px;
+            margin: 10px;
+            object-fit: contain;
+        }
+
+        .imgp4 img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .cconp4 {
+            padding: 5px;
+        }
+
+        .head {
+            text-align: center;
+        }
+
+        .gbox {
+            border: 2px solid green;
+            padding: 3px;
+            background-color: green;
+            font-size: xx-large;
+            margin: 5px;
+            margin-left: 30px;
+        }
+
+        .ofayur {
+            margin-left: 350px;
+        }
+
+        .origin,
+        .medben {
+            font-weight: bold;
+            font-size: large;
+        }
+
+        .bg-green {
+            background-color: #093E00;
+            color: white;
+            margin-right: 207px;
+        }
+
+
+        .text-word {
+            opacity: 0;
+            display: inline-block flex;
+            animation: fadeIn 0.8s forwards;
+            justify-content: right;
+        }
+
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Delay the animation for each word */
+        .text-word:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .text-word:nth-child(2) {
+            animation-delay: 0.5s;
+        }
+
+        .text-word:nth-child(3) {
+            animation-delay: 1s;
+        }
+
+        .text-word:nth-child(4) {
+            animation-delay: 1.5s;
+        }
+
+        @keyframes slide-in {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .bottombox {
+            border: 2px solid green;
+            background-color: green;
+            margin-top: 30px;
+            padding: 10px;
+        }
+
+        .allr {
+            text-align: center;
+        }
+
+        .bb2 {
+            display: flex;
+            gap: 35px;
+            margin: 0;
+            margin-left: 0.5vw;
+        }
+
+        .upyear {
+            margin-left: 1000px;
+        }
+
+        .fbimg {
+
+            margin-top: 4px;
+        }
+
+        .fw-bold {
+            font-family: "Outfit", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: bold;
+            font-style: normal;
+            color: #2f5d2f;
+            margin-right: 60vw;
+            font-size: 48px;
         }
     </style>
 </head>
@@ -112,107 +466,748 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
-            <a class="navbar-brand" href="#"><img src="../images/LOGO TREE.png" alt="HerbSphere Logo"> HerbSphere</a>
+            <a class="navbar-brand" href=""><img src="../images/LOGO TREE.png" alt="HerbSphere Logo"> HerbSphere</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Home</a>
+                        <a class="nav-link" href="http://127.0.0.1:3002/HTML/index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="http://127.0.0.1:3000/HTML/about.html" target="_blank">About us</a>
+                        <a class="nav-link" href="http://127.0.0.1:3002/HTML/about.html" target="_blank">About us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="http://127.0.0.1:3000/HTML/about.html#contact target="_blank" >Contact</a>
+                        <a class="nav-link" href="http://127.0.0.1:3002/HTML/about.html#contact" target="
+                            _blank">Contact</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <div class="hero">
+    <div class="hero display">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6">
-                    <h1>Plants Makes,<br>Everything Better</h1>
-                    <p class="lead mb-4">Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam
-                        in
-                        hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices
-                        mauris. Maecenas
-                        vitae mattis tellus.</p>
+                    <h1>Nature's cure,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Simply pure!</h1>
+                    <p class="lead mb-4">Step into the world of green, where nature and tranquility meet. Explore our
+                        virtual garden filled with the beauty and benefits of plants that can transform your space and
+                        well-being.</p>
                     <button class="btn btn-know-more">Know More</button>
                 </div>
                 <div class="col-lg-6">
                     <div class="main-plant-image">
-                        <img src="../images/—Pngtree—3d rendering tulsi plant_14693566.png" alt="Main Plant"
-                            class="img-fluid">
+                        <img src="../SVG/home tree.svg" alt="Main Plant" class="img-fluid">
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Horizontal scrollable section for plant cards -->
-    <div class="cardcontainer" id="cardContainer">
-        <!-- Plant card 1 -->
-        <div class="plantcontainer">
-            <div class="plantimg">
-                <img src="http://127.0.0.1:3000/Images/neem.svg" alt="Neem Plant">
-            </div>
-            <h4 class="plantname">Neem</h4>
-            <h5 class="plantinfo">Azadirachta indica</h5>
-        </div>
+    <div class="cardcontainer display" id="cardContainer">
 
-        <!-- Add more plant cards here as needed -->
 
-        <!-- Example repeated plant card -->
-        <div class="plantcontainer">
-            <div class="plantimg">
-                <img src="http://127.0.0.1:3000/Images/neem.svg" alt="Neem Plant">
-            </div>
-            <h4 class="plantname">Neem</h4>
-            <h5 class="plantinfo">Azadirachta indica</h5>
-        </div>
-
-        <div class="plantcontainer">
-            <div class="plantimg">
-                <img src="http://127.0.0.1:3000/Images/neem.svg" alt="Neem Plant">
-            </div>
-            <h4 class="plantname">Neem</h4>
-            <h5 class="plantinfo">Azadirachta indica</h5>
-        </div>
 
 
     </div>
 
-    <section class="know-more">
+
+    <section class="know-more display">
         <div class="container-fluid px-0">
             <div class="row g-0">
                 <div class="col-12 text-center py-5">
-                    <h1 class="display-5 fw-bold" style="color: #2f5d2f;">Learn the Benefits of Plants</h1>
-                    <p class="lead" style="color: #6c757d;">
-                        Discover how plants can improve your well-being, purify the air, and add beauty to your
-                        surroundings. Learn
-                        all about their benefits in an interactive way.
-                    </p>
+                    <h1 class="display-5 fw-bold" style="color: #2f5d2f;">Explore The Beauty <br> <span
+                            class="bg-green">of Nature</span></h1>
                 </div>
-                <div class="col-12 text-center">
-                    <img src="../images/benefits of plants.jpeg" class="img-fluid" alt="Benefits of Plants"
-                        style="max-width: 90%; height: auto;" loading="lazy">
+
+                <div class="imageovertext">
+                    <img src="../images/benefits of plants.jpeg" class="img-fluid" alt="Benefits of Plants">
+                    <div class="imagetext">
+                        <span class="text-word">Get</span>
+                        <span class="text-word">a</span>
+                        <span class="text-word">Natural</span>
+                        <span class="text-word">Experience</span>
+                    </div>
                 </div>
-                <div class="col-12 text-center py-4">
-                    <button type="button" class="btn btn-success btn-lg px-4 me-md-2"
-                        style="background-color: #4caf50; border-color: #4caf50;"><a href="https://ayush.gov.in/"
-                            class="learnmore" target="_blank" >Learn More</a>
-                    </button>
-                </div>
+
             </div>
         </div>
     </section>
 
+
+
+    <div class="container2">
+        <div class="bgimg">
+            <img src="../PNG/bgimg.jpeg" alt="Background Image">
+        </div>
+
+        <div class="ayush">
+            <div id="ayurveda" class="con">
+                <h3 class="font ">Ayurveda</h3>
+                <img src="../Images/ayurvedic.jpg" height="200px" width="200px" alt="">
+
+                <div class="tooltip-snippet">
+                    Ayurveda is an ancient Indian system of medicine that focuses on balancing the body, mind, and
+                    spirit to promote health and well-being.
+                </div>
+            </div>
+
+            <div id="naturopathy" class="con">
+                <h3 class="font ">Naturopathy</h3>
+                <img src="../Images/naturopathy.jpg" height="200px" alt="">
+                <div class="tooltip-snippet">
+                    Naturopathy emphasizes the use of natural remedies and therapies to promote the body's self-healing
+                    abilities.
+                </div>
+            </div>
+
+            <div id="unani" class="con">
+                <h3 class="font ">Unani</h3>
+                <img src="../Images/unani.jpeg" height="200px" alt="">
+                <div class="tooltip-snippet">
+                    Unani is a system of medicine influenced by Greek, Persian, and Islamic traditions that focuses on
+                    restoring balance to the body.
+                </div>
+            </div>
+
+            <div id="siddha" class="con">
+                <h3 class="font ">Siddha</h3>
+                <img src="../Images/siddha.jpg" height="200px" alt="">
+                <div class="tooltip-snippet">
+                    Siddha is a traditional South Indian healing practice based on alchemy, spirituality, and medicinal
+                    plants.
+                </div>
+            </div>
+
+            <div id="homeopathy" class="con">
+                <h3 class="font ">Homeopathy</h3>
+                <img src="../Images/homeopathy.jpg" height="200px" alt="">
+                <div class="tooltip-snippet">
+                    Homeopathy is a system of alternative medicine that uses highly diluted substances to stimulate the
+                    body's natural healing process.
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="page4 ayu">
+            <div class="head">
+                <h1 class="font bold">EXPLORE THE DEPTH</h1>
+                <span class="gbox ofayur font" style="color: white;">of Ayurveda</span>
+            </div>
+            <div class="containerp4">
+                <div class="conp4">
+                    <div class="imgp4">
+
+                        <a href="http://127.0.0.1:3002/3d-file/realistic_tree/3d.html" class="threed"> <img
+                                src="../PNG/neem.png" alt="Neem" target="_blank"></a>
+                    </div>
+                    <div class="cconp4">
+                        <span class="gbox font" style="color: white;">NEEM</span>
+                        <span class="soundneem"><img src="../SVG/sound.svg" alt=""></span>
+                        <ul>
+                            <li class="origin"> Origin</li>
+                            Native to the Indian subcontinent and dry areas of South Asia
+                            <li class="medben">Medicinal Benefits</li> Treats skin disorders (eczema, acne), promotes
+                            blood
+                            purification, boosts immunity, and has anti-inflammatory, anti-bacterial, and anti-fungal
+                            properties.
+                        </ul>
+                    </div>
+                </div>
+                <div class="conp4">
+                    <div class="imgp4">
+
+                        <img class="sound" src="../PNG/ashwagandha.png" alt="Neem">
+                    </div>
+                    <div class="cconp4">
+                        <span class="gbox font" style="color: white;">Ashwagandha</span>
+                        <span class="soundash" style="margin-left: " 90%;"><img src="../SVG/sound.svg" alt=""></span>
+                        <ul>
+                            <li class="origin"> Origin</li>
+                            Native to India, North Africa, and the Middle East.
+                            <li class="medben">Medicinal Benefits</li> Adaptogen that reduces stress and anxiety,
+                            improves
+                            energy levels, boosts immune function, enhances brain function, and reduces inflammation.
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="conp4">
+                <div class="imgp4">
+
+                    <img src="../PNG/amla.png" alt="Neem">
+                </div>
+                <div class="cconp4">
+                    <span class="gbox font" style="color: white;">Amla</span>
+                    <ul>
+                        <li class="origin"> Origin</li>
+                        Native to India, used traditionally in Ayurveda.
+                        <li class="medben">Medicinal Benefits</li> THigh in Vitamin C, enhances immunity, improves
+                        digestion, promotes liver health, enhances skin and hair health, and has antioxidant properties.
+                    </ul>
+                </div>
+            </div>
+
+            <div class="conp4">
+                <div class="imgp4">
+
+                    <img src="../PNG/turmeric.png" alt="Neem">
+                </div>
+                <div class="cconp4">
+                    <span class="gbox font">Turmeric</span>
+                    <ul>
+                        <li class="origin"> Origin</li>
+                        Native to Southeast Asia, particularly India.
+                        <li class="medben">Medicinal Benefits</li>Powerful anti-inflammatory, antioxidant, boosts immune
+                        function, aids in digestion, supports heart health, and may help in managing arthritis
+                    </ul>
+                </div>
+            </div>
+
+            <div class="conp4">
+                <div class="imgp4">
+
+                    <img src="../PNG/shatavari.png" alt="Neem">
+                </div>
+                <div class="cconp4">
+                    <span class="gbox font">Shatavari</span>
+                    <ul>
+                        <li class="origin "> Origin</li>
+                        Found in the Indian subcontinent and Africa.
+                        <li class="medben">Medicinal Benefits</li> Balances female hormones, enhances reproductive
+                        health,
+                        improves digestion, boosts the immune system, and is used as a general health tonic.
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="page4 naturo">
+            <div class="head">
+                <h1 font bold>EXPLORE THE DEPTH</h1>
+                <span class="gbox ofayur font">of Naturopathy</span>
+            </div>
+            <div class="containerp4">
+                <div class="conp4">
+                    <div class="imgp4">
+
+                        <img src="../PNG/aloe vera.png" alt="Neem">
+                    </div>
+                    <div class="cconp4">
+                        <span class="gbox font">Aloe vera</span>
+                        <ul>
+                            <li class="origin"> Origin</li>
+                            Originated in the Arabian Peninsula, now widely cultivated worldwide.
+                            <li class="medben">Medicinal Benefits</li> Treats skin conditions (burns, wounds), promotes
+                            digestion, supports liver function, has anti-inflammatory properties, and helps in wound
+                            healing.
+                        </ul>
+                    </div>
+                </div>
+                <div class="conp4">
+                    <div class="imgp4">
+
+                        <img src="../PNG/tulsi.png" alt="Neem">
+                    </div>
+                    <div class="cconp4">
+                        <span class="gbox font">Tulsi</span>
+                        <ul>
+                            <li class="origin"> Origin</li>
+                            Native to India, considered a sacred plant.
+                            <li class="medben">Medicinal Benefits</li> Stress relief (adaptogen), respiratory health,
+                            boosts
+                            immunity, helps in controlling blood sugar levels, has anti-inflammatory and anti-microbial
+                            properties.
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="conp4">
+                <div class="imgp4">
+
+                    <img src="../PNG/Brahmi.png" alt="Neem">
+                </div>
+                <div class="cconp4">
+                    <span class="gbox font">Brahmi</span>
+                    <ul>
+                        <li class="origin"> Origin</li>
+                        Native to wetlands of India and other parts of Southeast Asia.
+                        <li class="medben">Medicinal Benefits</li> TImproves cognitive function, boosts memory, reduces
+                        anxiety and stress, enhances focus, and promotes overall brain health.
+
+                    </ul>
+                </div>
+            </div>
+
+            <div class="conp4">
+                <div class="imgp4">
+
+                    <img src="../PNG/giloy.png" alt="Neem">
+                </div>
+                <div class="cconp4">
+                    <span class="gbox font">Giloy</span>
+                    <ul>
+                        <li class="origin"> Origin</li>
+                        Native to India and commonly used in Ayurvedic practices.
+                        <li class="medben">Medicinal Benefits</li> Known as an immunity booster, helps in fever control,
+                        supports general health, treats respiratory infections, and has anti-inflammatory properties.
+
+                    </ul>
+                </div>
+            </div>
+
+            <div class="conp4">
+                <div class="imgp4">
+
+                    <img src="../PNG/Moringa.png" alt="Neem">
+                </div>
+                <div class="cconp4">
+                    <span class="gbox font">Moringa</span>
+                    <ul>
+                        <li class="origin"> Origin</li>
+                        Native to the foothills of the Himalayas in India.
+                        <li class="medben">Medicinal Benefits</li> Treats malnutrition, supports digestion, reduces
+                        inflammation, helps in lowering cholesterol, and is rich in antioxidants.
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="page4 unan">
+            <div class="head">
+                <h1 font bold>EXPLORE THE DEPTH</h1>
+                <span class="gbox ofayur font">of Unani</span>
+            </div>
+            <div class="containerp4">
+                <div class="conp4">
+                    <div class="imgp4">
+
+                        <img src="../png/Sarpagandha.png" alt="Neem">
+                    </div>
+                    <div class="cconp4">
+                        <span class="gbox font">Sarpagandha</span>
+                        <ul>
+                            <li class="origin"> Origin</li>
+                            Native to India and Southeast Asia.
+                            <li class="medben">Medicinal Benefits</li> Treats hypertension, anxiety, insomnia, has
+                            sedative effects, and is used for calming the nervous system.
+                        </ul>
+                    </div>
+                </div>
+                <div class="conp4">
+                    <div class="imgp4">
+
+                        <img src="../PNG/Bael.png" alt="Neem">
+                    </div>
+                    <div class="cconp4">
+                        <span class="gbox">Bael</span>
+                        <ul>
+                            <li class="origin font"> Origin</li>
+                            Native to India and Southeast Asia.
+                            <li class="medben">Medicinal Benefits</li> Treats digestive issues, especially diarrhea and
+                            constipation, boosts immunity, regulates blood sugar levels, and supports heart health.
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="conp4">
+                <div class="imgp4">
+
+                    <img src="../PNG/Bhringraj.png" alt="Neem">
+                </div>
+                <div class="cconp4">
+                    <span class="gbox">Bhringraj</span>
+                    <ul>
+                        <li class="origin"> Origin</li>
+                        Native to the Indian subcontinent and dry areas of South Asia
+                        <li class="medben">Medicinal Benefits</li> Treats skin disorders (eczema, acne), promotes
+                        blood
+                        purification, boosts immunity, and has anti-inflammatory, anti-bacterial, and anti-fungal
+                        properties.
+                    </ul>
+                </div>
+            </div>
+
+            <div class="conp4">
+                <div class="imgp4">
+
+                    <img src="../PNG/Arjuna.png" alt="Neem">
+                </div>
+                <div class="cconp4">
+                    <span class="gbox">Arjuna</span>
+                    <ul>
+                        <li class="origin"> Origin</li>
+                        Native to India.
+                        <li class="medben">Medicinal Benefits</li> Strengthens heart muscles, improves heart health,
+                        lowers cholesterol, improves circulation, and treats cardiovascular diseases.
+
+                    </ul>
+                </div>
+            </div>
+
+            <div class="conp4">
+                <div class="imgp4">
+
+                    <img src="../PNG/Punarnava.png" alt="Neem">
+                </div>
+                <div class="cconp4">
+                    <span class="gbox">Punarnava</span>
+                    <ul>
+                        <li class="origin"> Origin</li>
+                        Widely found in India and tropical countries.
+                        <li class="medben">Medicinal Benefits</li> Supports kidney health, reduces inflammation,
+                        improves liver function, and helps in managing fluid retention.
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="page4 sid">
+            <div class="head">
+                <h1>EXPLORE THE DEPTH</h1>
+                <span class="gbox ofayur">of Siddha</span>
+            </div>
+            <div class="containerp4">
+                <div class="conp4">
+                    <div class="imgp4">
+
+                        <img src="../PNG/vasaka.png" alt="Neem">
+                    </div>
+                    <div class="cconp4">
+                        <span class="gbox">Vasaka</span>
+                        <ul>
+                            <li class="origin"> Origin</li>
+                            Native to India and Southeast Asia.
+                            <li class="medben">Medicinal Benefits</li> Treats respiratory issues, cough, bronchitis,
+                            asthma, has anti-inflammatory properties, and aids in clearing phlegm.
+                        </ul>
+                    </div>
+                </div>
+                <div class="conp4">
+                    <div class="imgp4">
+
+                        <img src="../PNG/Guggul.png" alt="Neem">
+                    </div>
+                    <div class="cconp4">
+                        <span class="gbox">Guggul</span>
+                        <ul>
+                            <li class="origin"> Origin</li>
+                            Native to India and the Middle East.
+                            <li class="medben">Medicinal Benefits</li> Lowers cholesterol, helps in weight loss, reduces
+                            joint inflammation, treats arthritis, and has anti-inflammatory properties.
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="conp4">
+                <div class="imgp4">
+
+                    <img src="../png/Haritaki.png" alt="Neem">
+                </div>
+                <div class="cconp4">
+                    <span class="gbox">Haritaki</span>
+                    <ul>
+                        <li class="origin"> Origin</li>
+                        Native to India and Southeast Asia.
+                        <li class="medben">Medicinal Benefits</li> Promotes digestive health, aids in detoxification,
+                        improves heart health, and supports skin and hair health.
+
+                    </ul>
+                </div>
+            </div>
+
+            <div class="conp4">
+                <div class="imgp4">
+
+                    <img src="../PNG/Manjistha.png" alt="Neem">
+                </div>
+                <div class="cconp4">
+                    <span class="gbox">Manjistha</span>
+                    <ul>
+                        <li class="origin"> Origin</li>
+                        Native to India and tropical regions of Asia.
+                        <li class="medben">Medicinal Benefits</li> Purifies blood, improves skin health, treats acne and
+                        skin disorders, and supports the lymphatic system.
+
+                    </ul>
+                </div>
+            </div>
+
+            <div class="conp4">
+                <div class="imgp4">
+
+                    <img src="../PNG/Nirgundi.png" alt="Neem">
+                </div>
+                <div class="cconp4">
+                    <span class="gbox">Nirgundi</span>
+                    <ul>
+                        <li class="origin"> Origin</li>
+                        Native to India and Southeast Asia.
+                        <li class="medben">Medicinal Benefits</li> Reduces inflammation, alleviates joint pain, supports
+                        respiratory health, and helps in managing arthritis and other inflammatory conditions.
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="page4 homeo">
+            <div class="head">
+                <h1>EXPLORE THE DEPTH</h1>
+                <span class="gbox ofayur">of Homeopathy</span>
+            </div>
+            <div class="containerp4">
+                <div class="conp4">
+                    <div class="imgp4">
+
+                        <img src="../PNG/Licorice.png" alt="Neem">
+                    </div>
+                    <div class="cconp4">
+                        <span class="gbox">Licorice</span>
+                        <ul>
+                            <li class="origin"> Origin</li>
+                            Native to Southern Europe, parts of Asia, and the Mediterranean.
+                            <li class="medben">Medicinal Benefits</li> Treats respiratory conditions (cough, asthma),
+                            helps with ulcers and digestive issues, reduces inflammation, and has anti-viral properties.
+                        </ul>
+                    </div>
+                </div>
+                <div class="conp4">
+                    <div class="imgp4">
+
+                        <img src="../PNG/Fenugreek.png" alt="Neem">
+                    </div>
+                    <div class="cconp4">
+                        <span class="gbox">Fenugreek</span>
+                        <ul>
+                            <li class="origin"> Origin</li>
+                            Native to the Mediterranean region and Western Asia.
+                            <li class="medben">Medicinal Benefits</li> Controls blood sugar, improves digestion, reduces
+                            inflammation, promotes milk production in lactating mothers, and improves cholesterol
+                            levels.
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="conp4">
+                <div class="imgp4">
+
+                    <img src="../PNG/Peppermint.png" alt="Neem">
+                </div>
+                <div class="cconp4">
+                    <span class="gbox">Peppermint</span>
+                    <ul>
+                        <li class="origin"> Origin</li>
+                        Native to Europe and the Middle East.
+                        <li class="medben">Medicinal Benefits</li>
+                        Aids digestion, relieves headaches, treats respiratory problems, and has cooling,
+                        anti-inflammatory, and anti-spasmodic effects.
+                    </ul>
+                </div>
+            </div>
+
+            <div class="conp4">
+                <div class="imgp4">
+
+                    <img src="../PNG/Shankhapushpi.png" alt="Neem">
+                </div>
+                <div class="cconp4">
+                    <span class="gbox">Shankhapushpi</span>
+                    <ul>
+                        <li class="origin"> Origin</li>
+                        Native to India.
+                        <li class="medben">Medicinal Benefits</li> Reduces stress, improves cognitive function, enhances
+                        memory, acts as a neuroprotective agent, and promotes mental calmness.
+
+                    </ul>
+                </div>
+            </div>
+
+            <div class="conp4">
+                <div class="imgp4">
+
+                    <img src="../PNG/Kalmegh.png" alt="Neem">
+                </div>
+                <div class="cconp4">
+                    <span class="gbox">Kalmegh</span>
+                    <ul>
+                        <li class="origin"> Origin</li>
+                        Native to India and Sri Lanka.
+                        <li class="medben">Medicinal Benefits</li> Enhances liver function, boosts immunity, treats
+                        fever and infections, supports digestive health, and has anti-inflammatory properties.
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+
+
+    <section class="corousel display"></section>
+    <div class="container">
+        <h2 class="text-center mb-4 font large display" style="color: #2e7d32; font-weight: bold;">Our Heroes</h2>
+        <div id="carouselExampleCaptions" class="carousel slide display" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="../Images/plating 3.jpg" class="d-block w-100" alt="Tree Planter 1"
+                        style="object-fit: cover; height: 500px;">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 style="color: #ff4081;">"The best time to plant a tree was 20 years ago. The second-best
+                            time is now."</h5>
+                        <p>— Chinese Proverb</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="../Images/planting 2.jpg" class="d-block w-100" alt="Tree Planter 2"
+                        style="object-fit: cover; height: 500px;">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 style="color: #ff4081;">"In every walk with nature, one receives far more than he seeks."
+                        </h5>
+                        <p>— John Muir</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="../Images/planting.jpg" class="d-block w-100" alt="Tree Planter 3"
+                        style="object-fit: cover; height: 500px;">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 style="color: #ff4081;">"Nature is not a place to visit. It is home."</h5>
+                        <p>— Gary Snyder</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    </section>
+
+    <section class="thoughts-section py-5 display" style="background-color: #f1f8e9;">
+        <div class="container">
+            <h2 class="text-center mb-4 font large" style="color: #2e7d32; font-weight: bold;">Inspiring Thoughts</h2>
+            <div id="thoughtsCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="text-center">
+                            <p class="lead" style="color: #4caf50;">"Adopt the pace of nature: her secret is patience."
+                            </p>
+                            <p>— Ralph Waldo Emerson</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="text-center">
+                            <p class="lead" style="color: #4caf50;">"The clearest way into the Universe is through a
+                                forest wilderness."</p>
+                            <p>— John Muir</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="text-center">
+                            <p class="lead" style="color: #4caf50;">"Look deep into nature, and then you will understand
+                                everything better."</p>
+                            <p>— Albert Einstein</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="text-center">
+                            <p class="lead" style="color: #4caf50;">"The Earth has music for those who listen."</p>
+                            <p>— George Santayana</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="text-center">
+                            <p class="lead" style="color: #4caf50;">"Nature does not hurry, yet everything is
+                                accomplished."</p>
+                            <p>— Lao Tzu</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#thoughtsCarousel"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#thoughtsCarousel"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <div class="col-12 display text-center py-4">
+        <button type="button" class="btn btn-success btn-lg px-4 me-md-2"
+            style="background-color: #4caf50; border-color: #4caf50;"><a href="https://ayush.gov.in/" class="learnmore"
+                target="_blank">Learn More</a>
+        </button>
+    </div>
+
+    <div class="bottombox display">
+        <h6 class="allr">Copyright&copy;ALL Right Reserved | HerbSphere</h6>
+        <h4 class="getc" style="font-weight: bolder; color: black;">Get Connected</h4>
+        <div class="bb2">
+            <a href="https://www.youtube.com/@MinistryofAYUSHofficial" target="-blank"><img src="../SVG/youtube.svg"
+                    height="40px" alt=""></a>
+            <a href="https://www.facebook.com/public/Ayush%20Mantralaya/" target="_blank"><img class="fbimg"
+                    src="../SVG/facebook.svg" height="30px" alt=""></a>
+            <div class="upyear">
+                <h6 style="font-weight: bold; color: black;">Last Updated - YEAR 2024</h6>
+            </div>
+        </div>
+
+    </div>
+    </div>
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../JavaScript/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#carouselExampleCaptions').carousel({
+                interval: 3000,
+                wrap: true
+            });
+        });
+    </script>
 </body>
 
 </html>
