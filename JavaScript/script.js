@@ -179,12 +179,18 @@ async function main() {
 
     document.querySelector(".soundneem").addEventListener("click", () => {
         let audio = new Audio("http://127.0.0.1:3002/audio/Neem.mp3");
-        audio.play();
+        
+        audio.play().catch(error => {
+            console.error("Audio playback failed:", error);
+        });
     });
-
+    
     document.querySelector(".soundash").addEventListener("click", () => {
         let audio = new Audio("http://127.0.0.1:3002/audio/Aswagandha.mp3");
-        audio.play();
+    
+        audio.play().catch(error => {
+            console.error("Audio playback failed:", error);
+        });
     });
 
 }

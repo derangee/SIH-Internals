@@ -7,16 +7,30 @@
     <title>HerbSphere - Plants Make Everything Better</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="shortcut icon" href="../SVG/favicon icon/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
         body {
             background-color: #e8f5e9;
             font-family: Arial, sans-serif;
+        }
+
+        .hero {
+            font-family: "Outfit", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: bold;
+            font-style: normal;
         }
 
         .navbar-brand {
             font-weight: bold;
             background: linear-gradient(to bottom, #ccffd1, white);
         }
+
 
         .navbar-brand img {
             width: 30px;
@@ -85,6 +99,15 @@
             display: flex;
             justify-content: center;
             align-items: center;
+
+        }
+
+        .plantcontainer h4 {
+            color: white;
+        }
+
+        .plantcontainer h5 {
+            color: #ccffd1;
         }
 
         .plantcontainer img {
@@ -226,6 +249,28 @@
             z-index: 1;
         }
 
+        .bold {
+            font-weight: bold;
+        }
+
+        .imagetext {
+            font-family: "Outfit", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: bold;
+            font-style: normal;
+        }
+
+
+        .font {
+            font-family: "Outfit", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: bold;
+            font-style: normal;
+        }
+
+        .large {
+            font-size: 70px;
+        }
 
         .ayu {
             display: none;
@@ -256,7 +301,7 @@
 
         .conp4 {
             display: flex;
-            background-color: rgb(208, 232, 208);
+            background-color: #dcf2ca.;
             border: 2px solid transparent;
             border-radius: 10px;
             margin: 20px;
@@ -290,7 +335,7 @@
             border-radius: 10px;
             height: 200px;
             width: 200px;
-            background-color: rgb(151, 241, 151);
+            background-color: #bfd9bb;
             padding: 10px;
             margin: 10px;
             object-fit: contain;
@@ -328,6 +373,50 @@
             font-size: large;
         }
 
+        .bg-green {
+            background-color: #093E00;
+            color: white;
+            margin-right: 207px;
+        }
+
+
+        .text-word {
+            opacity: 0;
+            display: inline-block flex;
+            animation: fadeIn 0.8s forwards;
+            justify-content: right;
+        }
+
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Delay the animation for each word */
+        .text-word:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .text-word:nth-child(2) {
+            animation-delay: 0.5s;
+        }
+
+        .text-word:nth-child(3) {
+            animation-delay: 1s;
+        }
+
+        .text-word:nth-child(4) {
+            animation-delay: 1.5s;
+        }
+
         @keyframes slide-in {
             to {
                 opacity: 1;
@@ -348,9 +437,9 @@
 
         .bb2 {
             display: flex;
-            gap: 5px;
+            gap: 35px;
             margin: 0;
-
+            margin-left: 0.5vw;
         }
 
         .upyear {
@@ -360,6 +449,16 @@
         .fbimg {
 
             margin-top: 4px;
+        }
+
+        .fw-bold {
+            font-family: "Outfit", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: bold;
+            font-style: normal;
+            color: #2f5d2f;
+            margin-right: 60vw;
+            font-size: 48px;
         }
     </style>
 </head>
@@ -377,10 +476,10 @@
                         <a class="nav-link" href="http://127.0.0.1:3002/HTML/index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="http://127.0.0.1:3000/HTML/about.html" target="_blank">About us</a>
+                        <a class="nav-link" href="http://127.0.0.1:3002/HTML/about.html" target="_blank">About us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="http://127.0.0.1:3000/HTML/about.html#contact target="
+                        <a class="nav-link" href="http://127.0.0.1:3002/HTML/about.html#contact" target="
                             _blank">Contact</a>
                     </li>
                 </ul>
@@ -392,7 +491,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6">
-                    <h1>Nature's cure,<br>Simply pure!</h1>
+                    <h1>Nature's cure,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Simply pure!</h1>
                     <p class="lead mb-4">Step into the world of green, where nature and tranquility meet. Explore our
                         virtual garden filled with the beauty and benefits of plants that can transform your space and
                         well-being.</p>
@@ -400,7 +499,7 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="main-plant-image">
-                        <img src="../Images/main plant.png" alt="Main Plant" class="img-fluid">
+                        <img src="../SVG/home tree.svg" alt="Main Plant" class="img-fluid">
                     </div>
                 </div>
             </div>
@@ -419,15 +518,19 @@
         <div class="container-fluid px-0">
             <div class="row g-0">
                 <div class="col-12 text-center py-5">
-                    <h1 class="display-5 fw-bold" style="color: #2f5d2f;">Explore The Beauty <br> of Nature</h1>
+                    <h1 class="display-5 fw-bold" style="color: #2f5d2f;">Explore The Beauty <br> <span
+                            class="bg-green">of Nature</span></h1>
                 </div>
 
                 <div class="imageovertext">
                     <img src="../images/benefits of plants.jpeg" class="img-fluid" alt="Benefits of Plants">
-                    <div class="imagetext">Get a Natural Experience</div>
+                    <div class="imagetext">
+                        <span class="text-word">Get</span>
+                        <span class="text-word">a</span>
+                        <span class="text-word">Natural</span>
+                        <span class="text-word">Experience</span>
+                    </div>
                 </div>
-
-
 
             </div>
         </div>
@@ -442,7 +545,7 @@
 
         <div class="ayush">
             <div id="ayurveda" class="con">
-                <h3>AYURVEDA</h3>
+                <h3 class="font ">Ayurveda</h3>
                 <img src="../Images/ayurvedic.jpg" height="200px" width="200px" alt="">
 
                 <div class="tooltip-snippet">
@@ -452,7 +555,7 @@
             </div>
 
             <div id="naturopathy" class="con">
-                <h3>Naturopathy</h3>
+                <h3 class="font ">Naturopathy</h3>
                 <img src="../Images/naturopathy.jpg" height="200px" alt="">
                 <div class="tooltip-snippet">
                     Naturopathy emphasizes the use of natural remedies and therapies to promote the body's self-healing
@@ -461,7 +564,7 @@
             </div>
 
             <div id="unani" class="con">
-                <h3>Unani</h3>
+                <h3 class="font ">Unani</h3>
                 <img src="../Images/unani.jpeg" height="200px" alt="">
                 <div class="tooltip-snippet">
                     Unani is a system of medicine influenced by Greek, Persian, and Islamic traditions that focuses on
@@ -470,7 +573,7 @@
             </div>
 
             <div id="siddha" class="con">
-                <h3>Siddha</h3>
+                <h3 class="font ">Siddha</h3>
                 <img src="../Images/siddha.jpg" height="200px" alt="">
                 <div class="tooltip-snippet">
                     Siddha is a traditional South Indian healing practice based on alchemy, spirituality, and medicinal
@@ -479,7 +582,7 @@
             </div>
 
             <div id="homeopathy" class="con">
-                <h3>Homeopathy</h3>
+                <h3 class="font ">Homeopathy</h3>
                 <img src="../Images/homeopathy.jpg" height="200px" alt="">
                 <div class="tooltip-snippet">
                     Homeopathy is a system of alternative medicine that uses highly diluted substances to stimulate the
@@ -493,18 +596,19 @@
 
         <div class="page4 ayu">
             <div class="head">
-                <h1>EXPLORE THE DEPTH</h1>
-                <span class="gbox ofayur">of Ayurveda</span>
+                <h1 class="font bold">EXPLORE THE DEPTH</h1>
+                <span class="gbox ofayur font" style="color: white;">of Ayurveda</span>
             </div>
             <div class="containerp4">
                 <div class="conp4">
                     <div class="imgp4">
 
-                       <a href="http://127.0.0.1:3002/3d-file/realistic_tree/3d.html" class="threed"> <img src="../PNG/neem.png" alt="Neem"></a>
+                        <a href="http://127.0.0.1:3002/3d-file/realistic_tree/3d.html" class="threed"> <img
+                                src="../PNG/neem.png" alt="Neem" target="_blank"></a>
                     </div>
                     <div class="cconp4">
-                        <span class="gbox">NEEM</span>
-                        <span class="sound" style="margin-left: 75%;"><img src="../SVG/sound.svg" alt=""></span>
+                        <span class="gbox font" style="color: white;">NEEM</span>
+                        <span class="soundneem"><img src="../SVG/sound.svg" alt=""></span>
                         <ul>
                             <li class="origin"> Origin</li>
                             Native to the Indian subcontinent and dry areas of South Asia
@@ -518,10 +622,11 @@
                 <div class="conp4">
                     <div class="imgp4">
 
-                        <img src="../PNG/ashwagandha.png" alt="Neem">
+                        <img class="sound" src="../PNG/ashwagandha.png" alt="Neem">
                     </div>
                     <div class="cconp4">
-                        <span class="gbox">Ashwagandha</span>
+                        <span class="gbox font" style="color: white;">Ashwagandha</span>
+                        <span class="soundash" style="margin-left: " 90%;"><img src="../SVG/sound.svg" alt=""></span>
                         <ul>
                             <li class="origin"> Origin</li>
                             Native to India, North Africa, and the Middle East.
@@ -539,7 +644,7 @@
                     <img src="../PNG/amla.png" alt="Neem">
                 </div>
                 <div class="cconp4">
-                    <span class="gbox">Amla</span>
+                    <span class="gbox font" style="color: white;">Amla</span>
                     <ul>
                         <li class="origin"> Origin</li>
                         Native to India, used traditionally in Ayurveda.
@@ -555,7 +660,7 @@
                     <img src="../PNG/turmeric.png" alt="Neem">
                 </div>
                 <div class="cconp4">
-                    <span class="gbox">Turmeric</span>
+                    <span class="gbox font">Turmeric</span>
                     <ul>
                         <li class="origin"> Origin</li>
                         Native to Southeast Asia, particularly India.
@@ -571,9 +676,9 @@
                     <img src="../PNG/shatavari.png" alt="Neem">
                 </div>
                 <div class="cconp4">
-                    <span class="gbox">Shatavari</span>
+                    <span class="gbox font">Shatavari</span>
                     <ul>
-                        <li class="origin"> Origin</li>
+                        <li class="origin "> Origin</li>
                         Found in the Indian subcontinent and Africa.
                         <li class="medben">Medicinal Benefits</li> Balances female hormones, enhances reproductive
                         health,
@@ -587,8 +692,8 @@
 
         <div class="page4 naturo">
             <div class="head">
-                <h1>EXPLORE THE DEPTH</h1>
-                <span class="gbox ofayur">of Naturopathy</span>
+                <h1 font bold>EXPLORE THE DEPTH</h1>
+                <span class="gbox ofayur font">of Naturopathy</span>
             </div>
             <div class="containerp4">
                 <div class="conp4">
@@ -597,7 +702,7 @@
                         <img src="../PNG/aloe vera.png" alt="Neem">
                     </div>
                     <div class="cconp4">
-                        <span class="gbox">Aloe vera</span>
+                        <span class="gbox font">Aloe vera</span>
                         <ul>
                             <li class="origin"> Origin</li>
                             Originated in the Arabian Peninsula, now widely cultivated worldwide.
@@ -613,7 +718,7 @@
                         <img src="../PNG/tulsi.png" alt="Neem">
                     </div>
                     <div class="cconp4">
-                        <span class="gbox">Tulsi</span>
+                        <span class="gbox font">Tulsi</span>
                         <ul>
                             <li class="origin"> Origin</li>
                             Native to India, considered a sacred plant.
@@ -632,7 +737,7 @@
                     <img src="../PNG/Brahmi.png" alt="Neem">
                 </div>
                 <div class="cconp4">
-                    <span class="gbox">Brahmi</span>
+                    <span class="gbox font">Brahmi</span>
                     <ul>
                         <li class="origin"> Origin</li>
                         Native to wetlands of India and other parts of Southeast Asia.
@@ -649,7 +754,7 @@
                     <img src="../PNG/giloy.png" alt="Neem">
                 </div>
                 <div class="cconp4">
-                    <span class="gbox">Giloy</span>
+                    <span class="gbox font">Giloy</span>
                     <ul>
                         <li class="origin"> Origin</li>
                         Native to India and commonly used in Ayurvedic practices.
@@ -666,7 +771,7 @@
                     <img src="../PNG/Moringa.png" alt="Neem">
                 </div>
                 <div class="cconp4">
-                    <span class="gbox">Moringa</span>
+                    <span class="gbox font">Moringa</span>
                     <ul>
                         <li class="origin"> Origin</li>
                         Native to the foothills of the Himalayas in India.
@@ -681,8 +786,8 @@
 
         <div class="page4 unan">
             <div class="head">
-                <h1>EXPLORE THE DEPTH</h1>
-                <span class="gbox ofayur">of Unani</span>
+                <h1 font bold>EXPLORE THE DEPTH</h1>
+                <span class="gbox ofayur font">of Unani</span>
             </div>
             <div class="containerp4">
                 <div class="conp4">
@@ -691,7 +796,7 @@
                         <img src="../png/Sarpagandha.png" alt="Neem">
                     </div>
                     <div class="cconp4">
-                        <span class="gbox">Sarpagandha</span>
+                        <span class="gbox font">Sarpagandha</span>
                         <ul>
                             <li class="origin"> Origin</li>
                             Native to India and Southeast Asia.
@@ -708,7 +813,7 @@
                     <div class="cconp4">
                         <span class="gbox">Bael</span>
                         <ul>
-                            <li class="origin"> Origin</li>
+                            <li class="origin font"> Origin</li>
                             Native to India and Southeast Asia.
                             <li class="medben">Medicinal Benefits</li> Treats digestive issues, especially diarrhea and
                             constipation, boosts immunity, regulates blood sugar levels, and supports heart health.
@@ -962,8 +1067,8 @@
 
     <section class="corousel display"></section>
     <div class="container">
-        <h2 class="text-center mb-4" style="color: #2e7d32; font-weight: bold;">Our Heroes</h2>
-        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <h2 class="text-center mb-4 font large display" style="color: #2e7d32; font-weight: bold;">Our Heroes</h2>
+        <div id="carouselExampleCaptions" class="carousel slide display" data-bs-ride="carousel">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
                     aria-current="true" aria-label="Slide 1"></button>
@@ -1016,7 +1121,7 @@
 
     <section class="thoughts-section py-5 display" style="background-color: #f1f8e9;">
         <div class="container">
-            <h2 class="text-center mb-4" style="color: #2e7d32; font-weight: bold;">Inspiring Thoughts</h2>
+            <h2 class="text-center mb-4 font large" style="color: #2e7d32; font-weight: bold;">Inspiring Thoughts</h2>
             <div id="thoughtsCarousel" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
@@ -1076,15 +1181,15 @@
     </div>
 
     <div class="bottombox display">
-        <h4 class="allr">Copyright&copy;ALL Right Reserved | HerbSphere</h4>
-        <h4 class="getc">Get Connected</h4>
+        <h6 class="allr">Copyright&copy;ALL Right Reserved | HerbSphere</h6>
+        <h4 class="getc" style="font-weight: bolder; color: black;">Get Connected</h4>
         <div class="bb2">
-            <a href="https://www.youtube.com/@MinistryofAYUSHofficial" target="-blank" ><img src="../SVG/youtube.svg" height="40px"
-                    alt=""></a>
-            <a href="https://www.facebook.com/public/Ayush%20Mantralaya/" target="_blank"><img class="fbimg" src="../SVG/facebook.svg"
-                    height="30px" alt=""></a>
+            <a href="https://www.youtube.com/@MinistryofAYUSHofficial" target="-blank"><img src="../SVG/youtube.svg"
+                    height="40px" alt=""></a>
+            <a href="https://www.facebook.com/public/Ayush%20Mantralaya/" target="_blank"><img class="fbimg"
+                    src="../SVG/facebook.svg" height="30px" alt=""></a>
             <div class="upyear">
-                <h6>Last Updated<br>YEAR 2024</h6>
+                <h6 style="font-weight: bold; color: black;">Last Updated - YEAR 2024</h6>
             </div>
         </div>
 
