@@ -334,6 +334,33 @@
                 transform: translateX(0);
             }
         }
+
+        .bottombox {
+            border: 2px solid green;
+            background-color: green;
+            margin-top: 30px;
+            padding: 10px;
+        }
+
+        .allr {
+            text-align: center;
+        }
+
+        .bb2 {
+            display: flex;
+            gap: 5px;
+            margin: 0;
+
+        }
+
+        .upyear {
+            margin-left: 1000px;
+        }
+
+        .fbimg {
+
+            margin-top: 4px;
+        }
     </style>
 </head>
 
@@ -392,12 +419,7 @@
         <div class="container-fluid px-0">
             <div class="row g-0">
                 <div class="col-12 text-center py-5">
-                    <h1 class="display-5 fw-bold" style="color: #2f5d2f;">Learn the Benefits <br> of Plants</h1>
-                    <p class="lead" style="color: #6c757d;">
-                        Discover how plants can improve your well-being, purify the air, and add beauty to your
-                        surroundings. Learn
-                        all about their benefits in an interactive way.
-                    </p>
+                    <h1 class="display-5 fw-bold" style="color: #2f5d2f;">Explore The Beauty <br> of Nature</h1>
                 </div>
 
                 <div class="imageovertext">
@@ -909,7 +931,8 @@
                     <ul>
                         <li class="origin"> Origin</li>
                         Native to India.
-                        <li class="medben">Medicinal Benefits</li> Reduces stress, improves cognitive function, enhances memory, acts as a neuroprotective agent, and promotes mental calmness.
+                        <li class="medben">Medicinal Benefits</li> Reduces stress, improves cognitive function, enhances
+                        memory, acts as a neuroprotective agent, and promotes mental calmness.
 
                     </ul>
                 </div>
@@ -924,29 +947,125 @@
                     <span class="gbox">Kalmegh</span>
                     <ul>
                         <li class="origin"> Origin</li>
-                        Native to India and Sri Lanka. 
-                        <li class="medben">Medicinal Benefits</li> Enhances liver function, boosts immunity, treats fever and infections, supports digestive health, and has anti-inflammatory properties.
+                        Native to India and Sri Lanka.
+                        <li class="medben">Medicinal Benefits</li> Enhances liver function, boosts immunity, treats
+                        fever and infections, supports digestive health, and has anti-inflammatory properties.
                     </ul>
                 </div>
             </div>
 
-
-
         </div>
-
+    </div>
     </div>
 
+
+    <section class="corousel"></section>
+    <div class="container">
+        <h2 class="text-center mb-4" style="color: #2e7d32; font-weight: bold;">Our Heroes</h2>
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="../Images/plating 3.jpg" class="d-block w-100" alt="Tree Planter 1"
+                        style="object-fit: cover; height: 500px;">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 style="color: #ff4081;">"The best time to plant a tree was 20 years ago. The second-best
+                            time is now."</h5>
+                        <p>— Chinese Proverb</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="../Images/planting 2.jpg" class="d-block w-100" alt="Tree Planter 2"
+                        style="object-fit: cover; height: 500px;">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 style="color: #ff4081;">"In every walk with nature, one receives far more than he seeks."
+                        </h5>
+                        <p>— John Muir</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="../Images/planting.jpg" class="d-block w-100" alt="Tree Planter 3"
+                        style="object-fit: cover; height: 500px;">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 style="color: #ff4081;">"Nature is not a place to visit. It is home."</h5>
+                        <p>— Gary Snyder</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
     </div>
+    </section>
 
-
-
-
-
-
-
-
-
-
+    <section class="thoughts-section py-5" style="background-color: #f1f8e9;">
+        <div class="container">
+            <h2 class="text-center mb-4" style="color: #2e7d32; font-weight: bold;">Inspiring Thoughts</h2>
+            <div id="thoughtsCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="text-center">
+                            <p class="lead" style="color: #4caf50;">"Adopt the pace of nature: her secret is patience."
+                            </p>
+                            <p>— Ralph Waldo Emerson</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="text-center">
+                            <p class="lead" style="color: #4caf50;">"The clearest way into the Universe is through a
+                                forest wilderness."</p>
+                            <p>— John Muir</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="text-center">
+                            <p class="lead" style="color: #4caf50;">"Look deep into nature, and then you will understand
+                                everything better."</p>
+                            <p>— Albert Einstein</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="text-center">
+                            <p class="lead" style="color: #4caf50;">"The Earth has music for those who listen."</p>
+                            <p>— George Santayana</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="text-center">
+                            <p class="lead" style="color: #4caf50;">"Nature does not hurry, yet everything is
+                                accomplished."</p>
+                            <p>— Lao Tzu</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#thoughtsCarousel"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#thoughtsCarousel"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </section>
 
     <div class="col-12 display text-center py-4">
         <button type="button" class="btn btn-success btn-lg px-4 me-md-2"
@@ -955,8 +1074,34 @@
         </button>
     </div>
 
+    <div class="bottombox">
+        <h4 class="allr">Copyright&copy;ALL Right Reserved | HerbSphere</h4>
+        <h4 class="getc">Get Connected</h4>
+        <div class="bb2">
+            <a href="https://www.youtube.com/@MinistryofAYUSHofficial" target="-blank" ><img src="../SVG/youtube.svg" height="40px"
+                    alt=""></a>
+            <a href="https://www.facebook.com/public/Ayush%20Mantralaya/" target="_blank"><img class="fbimg" src="../SVG/facebook.svg"
+                    height="30px" alt=""></a>
+            <div class="upyear">
+                <h6>Last Updated<br>YEAR 2024</h6>
+            </div>
+        </div>
+
+    </div>
+    </div>
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../JavaScript/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#carouselExampleCaptions').carousel({
+                interval: 3000,
+                wrap: true
+            });
+        });
+    </script>
 </body>
 
 </html>
