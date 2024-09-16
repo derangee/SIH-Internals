@@ -135,15 +135,56 @@ async function main() {
         });
     });
 
-    document.querySelectorAll(".con").forEach(element => {
+    /*document.querySelectorAll(".con").forEach(element => {
         element.addEventListener("click", () => {
             document.querySelectorAll(".con").forEach(e=>{
                 e.style.display="none"
             })
             document.querySelector(".page4").style.display = "block";
         })
-    });
+    });*/
 
+
+    document.getElementById("ayurveda").addEventListener("click", ()=>{
+        document.querySelectorAll(".con").forEach(e=>{
+            e.style.display = "none"
+        })
+
+        document.querySelector(".ayu").style.display = "block"
+    })
+
+    document.getElementById("naturopathy").addEventListener("click", ()=>{
+        document.querySelectorAll(".con").forEach(e=>{
+            e.style.display = "none"
+        })
+
+        document.querySelector(".naturo").style.display = "block"
+    })
+
+
+    document.getElementById("unani").addEventListener("click", ()=>{
+        document.querySelectorAll(".con").forEach(e=>{
+            e.style.display = "none"
+        })
+
+        document.querySelector(".unan").style.display = "block"
+    })
+
+    document.getElementById("siddha").addEventListener("click", ()=>{
+        document.querySelectorAll(".con").forEach(e=>{
+            e.style.display = "none"
+        })
+
+        document.querySelector(".sid").style.display = "block"
+    })
+
+    document.getElementById("homeopathy").addEventListener("click", ()=>{
+        document.querySelectorAll(".con").forEach(e=>{
+            e.style.display = "none"
+        })
+
+        document.querySelector(".homeo").style.display = "block"
+    })
 }
 
 main()

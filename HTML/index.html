@@ -212,12 +212,12 @@
 
         .imageovertext img {
             width: 100%;
-            height: auto;
+            height: 80%;
         }
 
         .imagetext {
             position: absolute;
-            top: 80%;
+            top: 60%;
             left: 80%;
             transform: translate(-50%, -50%);
             color: white;
@@ -227,9 +227,27 @@
         }
 
 
-        .page4 {
+        .ayu {
             display: none;
         }
+
+        .naturo {
+            display: none;
+        }
+
+        .unan {
+            display: none;
+        }
+
+        .sid {
+            display: none;
+        }
+
+        .homeo {
+            display: none;
+        }
+
+
 
         .containerp4 {
             margin: 10px;
@@ -275,6 +293,12 @@
             background-color: rgb(151, 241, 151);
             padding: 10px;
             margin: 10px;
+            object-fit: contain;
+        }
+
+        .imgp4 img {
+            width: 100%;
+            height: 100%;
         }
 
         .cconp4 {
@@ -395,7 +419,7 @@
         </div>
 
         <div class="ayush">
-            <div class="con">
+            <div id="ayurveda" class="con">
                 <h3>AYURVEDA</h3>
                 <img src="../Images/ayurvedic.jpg" height="200px" width="200px" alt="">
 
@@ -405,7 +429,7 @@
                 </div>
             </div>
 
-            <div class="con">
+            <div id="naturopathy" class="con">
                 <h3>Naturopathy</h3>
                 <img src="../Images/naturopathy.jpg" height="200px" alt="">
                 <div class="tooltip-snippet">
@@ -414,7 +438,7 @@
                 </div>
             </div>
 
-            <div class="con">
+            <div id="unani" class="con">
                 <h3>Unani</h3>
                 <img src="../Images/unani.jpeg" height="200px" alt="">
                 <div class="tooltip-snippet">
@@ -423,7 +447,7 @@
                 </div>
             </div>
 
-            <div class="con">
+            <div id="siddha" class="con">
                 <h3>Siddha</h3>
                 <img src="../Images/siddha.jpg" height="200px" alt="">
                 <div class="tooltip-snippet">
@@ -432,7 +456,7 @@
                 </div>
             </div>
 
-            <div class="con">
+            <div id="homeopathy" class="con">
                 <h3>Homeopathy</h3>
                 <img src="../Images/homeopathy.jpg" height="200px" alt="">
                 <div class="tooltip-snippet">
@@ -441,105 +465,476 @@
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="page4">
-        <div class="head">
-            <h1>EXPLORE THE DEPTH</h1>
-            <span class="gbox ofayur">of Ayurveda</span>
-        </div>
-        <div class="containerp4">
+
+
+
+        <div class="page4 ayu">
+            <div class="head">
+                <h1>EXPLORE THE DEPTH</h1>
+                <span class="gbox ofayur">of Ayurveda</span>
+            </div>
+            <div class="containerp4">
+                <div class="conp4">
+                    <div class="imgp4">
+
+                        <img src="../PNG/neem.png" alt="Neem">
+                    </div>
+                    <div class="cconp4">
+                        <span class="gbox">NEEM</span>
+                        <ul>
+                            <li class="origin"> Origin</li>
+                            Native to the Indian subcontinent and dry areas of South Asia
+                            <li class="medben">Medicinal Benefits</li> Treats skin disorders (eczema, acne), promotes
+                            blood
+                            purification, boosts immunity, and has anti-inflammatory, anti-bacterial, and anti-fungal
+                            properties.
+                        </ul>
+                    </div>
+                </div>
+                <div class="conp4">
+                    <div class="imgp4">
+
+                        <img src="../PNG/ashwagandha.png" alt="Neem">
+                    </div>
+                    <div class="cconp4">
+                        <span class="gbox">Ashwagandha</span>
+                        <ul>
+                            <li class="origin"> Origin</li>
+                            Native to India, North Africa, and the Middle East.
+                            <li class="medben">Medicinal Benefits</li> Adaptogen that reduces stress and anxiety,
+                            improves
+                            energy levels, boosts immune function, enhances brain function, and reduces inflammation.
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
             <div class="conp4">
                 <div class="imgp4">
 
-                    <img src="" alt="Neem">
+                    <img src="../PNG/amla.png" alt="Neem">
                 </div>
                 <div class="cconp4">
-                    <span class="gbox">NEEM</span>
+                    <span class="gbox">Amla</span>
+                    <ul>
+                        <li class="origin"> Origin</li>
+                        Native to India, used traditionally in Ayurveda.
+                        <li class="medben">Medicinal Benefits</li> THigh in Vitamin C, enhances immunity, improves
+                        digestion, promotes liver health, enhances skin and hair health, and has antioxidant properties.
+                    </ul>
+                </div>
+            </div>
+
+            <div class="conp4">
+                <div class="imgp4">
+
+                    <img src="../PNG/turmeric.png" alt="Neem">
+                </div>
+                <div class="cconp4">
+                    <span class="gbox">Turmeric</span>
+                    <ul>
+                        <li class="origin"> Origin</li>
+                        Native to Southeast Asia, particularly India.
+                        <li class="medben">Medicinal Benefits</li>Powerful anti-inflammatory, antioxidant, boosts immune
+                        function, aids in digestion, supports heart health, and may help in managing arthritis
+                    </ul>
+                </div>
+            </div>
+
+            <div class="conp4">
+                <div class="imgp4">
+
+                    <img src="../PNG/shatavari.png" alt="Neem">
+                </div>
+                <div class="cconp4">
+                    <span class="gbox">Shatavari</span>
+                    <ul>
+                        <li class="origin"> Origin</li>
+                        Found in the Indian subcontinent and Africa.
+                        <li class="medben">Medicinal Benefits</li> Balances female hormones, enhances reproductive
+                        health,
+                        improves digestion, boosts the immune system, and is used as a general health tonic.
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="page4 naturo">
+            <div class="head">
+                <h1>EXPLORE THE DEPTH</h1>
+                <span class="gbox ofayur">of Naturopathy</span>
+            </div>
+            <div class="containerp4">
+                <div class="conp4">
+                    <div class="imgp4">
+
+                        <img src="../PNG/aloe vera.png" alt="Neem">
+                    </div>
+                    <div class="cconp4">
+                        <span class="gbox">Aloe vera</span>
+                        <ul>
+                            <li class="origin"> Origin</li>
+                            Originated in the Arabian Peninsula, now widely cultivated worldwide.
+                            <li class="medben">Medicinal Benefits</li> Treats skin conditions (burns, wounds), promotes
+                            digestion, supports liver function, has anti-inflammatory properties, and helps in wound
+                            healing.
+                        </ul>
+                    </div>
+                </div>
+                <div class="conp4">
+                    <div class="imgp4">
+
+                        <img src="../PNG/tulsi.png" alt="Neem">
+                    </div>
+                    <div class="cconp4">
+                        <span class="gbox">Tulsi</span>
+                        <ul>
+                            <li class="origin"> Origin</li>
+                            Native to India, considered a sacred plant.
+                            <li class="medben">Medicinal Benefits</li> Stress relief (adaptogen), respiratory health,
+                            boosts
+                            immunity, helps in controlling blood sugar levels, has anti-inflammatory and anti-microbial
+                            properties.
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="conp4">
+                <div class="imgp4">
+
+                    <img src="../PNG/Brahmi.png" alt="Neem">
+                </div>
+                <div class="cconp4">
+                    <span class="gbox">Brahmi</span>
+                    <ul>
+                        <li class="origin"> Origin</li>
+                        Native to wetlands of India and other parts of Southeast Asia.
+                        <li class="medben">Medicinal Benefits</li> TImproves cognitive function, boosts memory, reduces
+                        anxiety and stress, enhances focus, and promotes overall brain health.
+
+                    </ul>
+                </div>
+            </div>
+
+            <div class="conp4">
+                <div class="imgp4">
+
+                    <img src="../PNG/giloy.png" alt="Neem">
+                </div>
+                <div class="cconp4">
+                    <span class="gbox">Giloy</span>
+                    <ul>
+                        <li class="origin"> Origin</li>
+                        Native to India and commonly used in Ayurvedic practices.
+                        <li class="medben">Medicinal Benefits</li> Known as an immunity booster, helps in fever control,
+                        supports general health, treats respiratory infections, and has anti-inflammatory properties.
+
+                    </ul>
+                </div>
+            </div>
+
+            <div class="conp4">
+                <div class="imgp4">
+
+                    <img src="../PNG/Moringa.png" alt="Neem">
+                </div>
+                <div class="cconp4">
+                    <span class="gbox">Moringa</span>
+                    <ul>
+                        <li class="origin"> Origin</li>
+                        Native to the foothills of the Himalayas in India.
+                        <li class="medben">Medicinal Benefits</li> Treats malnutrition, supports digestion, reduces
+                        inflammation, helps in lowering cholesterol, and is rich in antioxidants.
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="page4 unan">
+            <div class="head">
+                <h1>EXPLORE THE DEPTH</h1>
+                <span class="gbox ofayur">of Unani</span>
+            </div>
+            <div class="containerp4">
+                <div class="conp4">
+                    <div class="imgp4">
+
+                        <img src="../png/Sarpagandha.png" alt="Neem">
+                    </div>
+                    <div class="cconp4">
+                        <span class="gbox">Sarpagandha</span>
+                        <ul>
+                            <li class="origin"> Origin</li>
+                            Native to India and Southeast Asia.
+                            <li class="medben">Medicinal Benefits</li> Treats hypertension, anxiety, insomnia, has
+                            sedative effects, and is used for calming the nervous system.
+                        </ul>
+                    </div>
+                </div>
+                <div class="conp4">
+                    <div class="imgp4">
+
+                        <img src="../PNG/Bael.png" alt="Neem">
+                    </div>
+                    <div class="cconp4">
+                        <span class="gbox">Bael</span>
+                        <ul>
+                            <li class="origin"> Origin</li>
+                            Native to India and Southeast Asia.
+                            <li class="medben">Medicinal Benefits</li> Treats digestive issues, especially diarrhea and
+                            constipation, boosts immunity, regulates blood sugar levels, and supports heart health.
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="conp4">
+                <div class="imgp4">
+
+                    <img src="../PNG/Bhringraj.png" alt="Neem">
+                </div>
+                <div class="cconp4">
+                    <span class="gbox">Bhringraj</span>
                     <ul>
                         <li class="origin"> Origin</li>
                         Native to the Indian subcontinent and dry areas of South Asia
-                        <li class="medben">Medicinal Benefits</li> Treats skin disorders (eczema, acne), promotes blood
+                        <li class="medben">Medicinal Benefits</li> Treats skin disorders (eczema, acne), promotes
+                        blood
                         purification, boosts immunity, and has anti-inflammatory, anti-bacterial, and anti-fungal
                         properties.
                     </ul>
                 </div>
             </div>
+
             <div class="conp4">
                 <div class="imgp4">
 
-                    <img src="" alt="Neem">
+                    <img src="../PNG/Arjuna.png" alt="Neem">
                 </div>
                 <div class="cconp4">
-                    <span class="gbox">NEEM</span>
+                    <span class="gbox">Arjuna</span>
                     <ul>
                         <li class="origin"> Origin</li>
-                        Native to the Indian subcontinent and dry areas of South Asia
-                        <li class="medben">Medicinal Benefits</li> Treats skin disorders (eczema, acne), promotes blood
-                        purification, boosts immunity, and has anti-inflammatory, anti-bacterial, and anti-fungal
-                        properties.
+                        Native to India.
+                        <li class="medben">Medicinal Benefits</li> Strengthens heart muscles, improves heart health,
+                        lowers cholesterol, improves circulation, and treats cardiovascular diseases.
+
+                    </ul>
+                </div>
+            </div>
+
+            <div class="conp4">
+                <div class="imgp4">
+
+                    <img src="../PNG/Punarnava.png" alt="Neem">
+                </div>
+                <div class="cconp4">
+                    <span class="gbox">Punarnava</span>
+                    <ul>
+                        <li class="origin"> Origin</li>
+                        Widely found in India and tropical countries.
+                        <li class="medben">Medicinal Benefits</li> Supports kidney health, reduces inflammation,
+                        improves liver function, and helps in managing fluid retention.
+
                     </ul>
                 </div>
             </div>
         </div>
 
-        <div class="conp4">
-            <div class="imgp4">
 
-                <img src="" alt="Neem">
+
+
+        <div class="page4 sid">
+            <div class="head">
+                <h1>EXPLORE THE DEPTH</h1>
+                <span class="gbox ofayur">of Siddha</span>
             </div>
-            <div class="cconp4">
-                <span class="gbox">NEEM</span>
-                <ul>
-                    <li class="origin"> Origin</li>
-                    Native to the Indian subcontinent and dry areas of South Asia
-                    <li class="medben">Medicinal Benefits</li> Treats skin disorders (eczema, acne), promotes blood
-                    purification, boosts immunity, and has anti-inflammatory, anti-bacterial, and anti-fungal
-                    properties.
-                </ul>
+            <div class="containerp4">
+                <div class="conp4">
+                    <div class="imgp4">
+
+                        <img src="../PNG/vasaka.png" alt="Neem">
+                    </div>
+                    <div class="cconp4">
+                        <span class="gbox">Vasaka</span>
+                        <ul>
+                            <li class="origin"> Origin</li>
+                            Native to India and Southeast Asia.
+                            <li class="medben">Medicinal Benefits</li> Treats respiratory issues, cough, bronchitis,
+                            asthma, has anti-inflammatory properties, and aids in clearing phlegm.
+                        </ul>
+                    </div>
+                </div>
+                <div class="conp4">
+                    <div class="imgp4">
+
+                        <img src="../PNG/Guggul.png" alt="Neem">
+                    </div>
+                    <div class="cconp4">
+                        <span class="gbox">Guggul</span>
+                        <ul>
+                            <li class="origin"> Origin</li>
+                            Native to India and the Middle East.
+                            <li class="medben">Medicinal Benefits</li> Lowers cholesterol, helps in weight loss, reduces
+                            joint inflammation, treats arthritis, and has anti-inflammatory properties.
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="conp4">
+                <div class="imgp4">
+
+                    <img src="../png/Haritaki.png" alt="Neem">
+                </div>
+                <div class="cconp4">
+                    <span class="gbox">Haritaki</span>
+                    <ul>
+                        <li class="origin"> Origin</li>
+                        Native to India and Southeast Asia.
+                        <li class="medben">Medicinal Benefits</li> Promotes digestive health, aids in detoxification,
+                        improves heart health, and supports skin and hair health.
+
+                    </ul>
+                </div>
+            </div>
+
+            <div class="conp4">
+                <div class="imgp4">
+
+                    <img src="../PNG/Manjistha.png" alt="Neem">
+                </div>
+                <div class="cconp4">
+                    <span class="gbox">Manjistha</span>
+                    <ul>
+                        <li class="origin"> Origin</li>
+                        Native to India and tropical regions of Asia.
+                        <li class="medben">Medicinal Benefits</li> Purifies blood, improves skin health, treats acne and
+                        skin disorders, and supports the lymphatic system.
+
+                    </ul>
+                </div>
+            </div>
+
+            <div class="conp4">
+                <div class="imgp4">
+
+                    <img src="../PNG/Nirgundi.png" alt="Neem">
+                </div>
+                <div class="cconp4">
+                    <span class="gbox">Nirgundi</span>
+                    <ul>
+                        <li class="origin"> Origin</li>
+                        Native to India and Southeast Asia.
+                        <li class="medben">Medicinal Benefits</li> Reduces inflammation, alleviates joint pain, supports
+                        respiratory health, and helps in managing arthritis and other inflammatory conditions.
+
+                    </ul>
+                </div>
             </div>
         </div>
 
-        <div class="conp4">
-            <div class="imgp4">
 
-                <img src="" alt="Neem">
+
+        <div class="page4 homeo">
+            <div class="head">
+                <h1>EXPLORE THE DEPTH</h1>
+                <span class="gbox ofayur">of Homeopathy</span>
             </div>
-            <div class="cconp4">
-                <span class="gbox">NEEM</span>
-                <ul>
-                    <li class="origin"> Origin</li>
-                    Native to the Indian subcontinent and dry areas of South Asia
-                    <li class="medben">Medicinal Benefits</li> Treats skin disorders (eczema, acne), promotes blood
-                    purification, boosts immunity, and has anti-inflammatory, anti-bacterial, and anti-fungal
-                    properties.
-                </ul>
+            <div class="containerp4">
+                <div class="conp4">
+                    <div class="imgp4">
+
+                        <img src="../PNG/Licorice.png" alt="Neem">
+                    </div>
+                    <div class="cconp4">
+                        <span class="gbox">Licorice</span>
+                        <ul>
+                            <li class="origin"> Origin</li>
+                            Native to Southern Europe, parts of Asia, and the Mediterranean.
+                            <li class="medben">Medicinal Benefits</li> Treats respiratory conditions (cough, asthma),
+                            helps with ulcers and digestive issues, reduces inflammation, and has anti-viral properties.
+                        </ul>
+                    </div>
+                </div>
+                <div class="conp4">
+                    <div class="imgp4">
+
+                        <img src="../PNG/Fenugreek.png" alt="Neem">
+                    </div>
+                    <div class="cconp4">
+                        <span class="gbox">Fenugreek</span>
+                        <ul>
+                            <li class="origin"> Origin</li>
+                            Native to the Mediterranean region and Western Asia.
+                            <li class="medben">Medicinal Benefits</li> Controls blood sugar, improves digestion, reduces
+                            inflammation, promotes milk production in lactating mothers, and improves cholesterol
+                            levels.
+
+                        </ul>
+                    </div>
+                </div>
             </div>
+
+            <div class="conp4">
+                <div class="imgp4">
+
+                    <img src="../PNG/Peppermint.png" alt="Neem">
+                </div>
+                <div class="cconp4">
+                    <span class="gbox">Peppermint</span>
+                    <ul>
+                        <li class="origin"> Origin</li>
+                        Native to Europe and the Middle East.
+                        <li class="medben">Medicinal Benefits</li>
+                        Aids digestion, relieves headaches, treats respiratory problems, and has cooling,
+                        anti-inflammatory, and anti-spasmodic effects.
+                    </ul>
+                </div>
+            </div>
+
+            <div class="conp4">
+                <div class="imgp4">
+
+                    <img src="../PNG/Shankhapushpi.png" alt="Neem">
+                </div>
+                <div class="cconp4">
+                    <span class="gbox">Shankhapushpi</span>
+                    <ul>
+                        <li class="origin"> Origin</li>
+                        Native to India.
+                        <li class="medben">Medicinal Benefits</li> Reduces stress, improves cognitive function, enhances memory, acts as a neuroprotective agent, and promotes mental calmness.
+
+                    </ul>
+                </div>
+            </div>
+
+            <div class="conp4">
+                <div class="imgp4">
+
+                    <img src="../PNG/Kalmegh.png" alt="Neem">
+                </div>
+                <div class="cconp4">
+                    <span class="gbox">Kalmegh</span>
+                    <ul>
+                        <li class="origin"> Origin</li>
+                        Native to India and Sri Lanka. 
+                        <li class="medben">Medicinal Benefits</li> Enhances liver function, boosts immunity, treats fever and infections, supports digestive health, and has anti-inflammatory properties.
+                    </ul>
+                </div>
+            </div>
+
+
+
         </div>
-
-        <div class="conp4">
-            <div class="imgp4">
-
-                <img src="" alt="Neem">
-            </div>
-            <div class="cconp4">
-                <span class="gbox">NEEM</span>
-                <ul>
-                    <li class="origin"> Origin</li>
-                    Native to the Indian subcontinent and dry areas of South Asia
-                    <li class="medben">Medicinal Benefits</li> Treats skin disorders (eczema, acne), promotes blood
-                    purification, boosts immunity, and has anti-inflammatory, anti-bacterial, and anti-fungal
-                    properties.
-                </ul>
-            </div>
-        </div>
-
-
-
 
     </div>
-
-
 
     </div>
 
