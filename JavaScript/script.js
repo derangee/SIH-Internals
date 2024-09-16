@@ -125,16 +125,25 @@ async function main() {
 
     x.addEventListener("click", () => {
         const container2 = document.querySelector(".container2");
-    
+
         container2.style.display = "block";
-        container2.offsetHeight; 
+        container2.offsetHeight;
         container2.classList.add("show");
-    
+
         document.querySelectorAll(".display").forEach(element => {
             element.style.display = "none";
         });
     });
-    
+
+    document.querySelectorAll(".con").forEach(element => {
+        element.addEventListener("click", () => {
+            document.querySelectorAll(".con").forEach(e=>{
+                e.style.display="none"
+            })
+            document.querySelector(".page4").style.display = "block";
+        })
+    });
+
 }
 
 main()
