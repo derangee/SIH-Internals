@@ -135,15 +135,6 @@ async function main() {
         });
     });
 
-    /*document.querySelectorAll(".con").forEach(element => {
-        element.addEventListener("click", () => {
-            document.querySelectorAll(".con").forEach(e=>{
-                e.style.display="none"
-            })
-            document.querySelector(".page4").style.display = "block";
-        })
-    });*/
-
 
     document.getElementById("ayurveda").addEventListener("click", ()=>{
         document.querySelectorAll(".con").forEach(e=>{
@@ -185,6 +176,19 @@ async function main() {
 
         document.querySelector(".homeo").style.display = "block"
     })
+
+    document.querySelector(".soundneem").addEventListener("click", () => {
+        let audio = new Audio("http://127.0.0.1:3002/audio/Neem.mp3");
+        audio.play();
+    });
+
+    document.querySelector(".soundash").addEventListener("click", () => {
+        let audio = new Audio("http://127.0.0.1:3002/audio/Aswagandha.mp3");
+        audio.play();
+    });
+
 }
+
+
 
 main()
