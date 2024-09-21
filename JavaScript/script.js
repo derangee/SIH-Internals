@@ -85,7 +85,7 @@ const homeosci = {
 
 
 async function fetchplants() {
-    let a = await fetch("http://127.0.0.1:3002/png/");
+    let a = await fetch("http://127.0.0.1:3000/png/");
     let response = await a.text();
     let div = document.createElement("div");
     div.innerHTML = response;
@@ -178,7 +178,7 @@ async function main() {
     })
 
     document.querySelector(".soundneem").addEventListener("click", () => {
-        let audio = new Audio("http://127.0.0.1:3002/audio/Neem.mp3");
+        let audio = new Audio("http://127.0.0.1:3000/audio/Neem.mp3");
         
         audio.play().catch(error => {
             console.error("Audio playback failed:", error);
@@ -186,7 +186,7 @@ async function main() {
     });
     
     document.querySelector(".soundash").addEventListener("click", () => {
-        let audio = new Audio("http://127.0.0.1:3002/audio/Aswagandha.mp3");
+        let audio = new Audio("http://127.0.0.1:3000/audio/Aswagandha.mp3");
     
         audio.play().catch(error => {
             console.error("Audio playback failed:", error);
